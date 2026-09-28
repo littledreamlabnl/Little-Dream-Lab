@@ -1,504 +1,1115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Little Dream Lab | Family Café & Indoor Playground</title>
+  <title>Little Dream Lab | Family Café, Indoor Playground & Creative Community Space</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta
+    name="description"
+    content="Little Dream Lab is a family café, indoor playground and creative community space designed for children and families."
+  >
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
-        body {
-            background: #fff8f1;
-            color: #6d5b4d;
-            font-family: "DM Sans", sans-serif;
-            line-height: 1.6;
-        }
+  <style>
 
-        h1, h2, h3 {
-            font-family: "Playfair Display", serif;
-            font-weight: 500;
-        }
+    /* =========================
+       GENERAL
+    ========================= */
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        /* NAVIGATION */
+    html {
+      scroll-behavior: smooth;
+    }
 
-        .navbar {
-            width: 100%;
-            padding: 24px 6%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid rgba(109, 91, 77, 0.08);
-            background: rgba(255, 248, 241, 0.96);
-        }
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: #fff8f1;
+      color: #4a403b;
+      line-height: 1.6;
+    }
 
-        .nav-logo img {
-    width: 150px;
-    height: auto;
-    display: block;
-}
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            align-items: center;
-            font-size: 14px;
-        }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-        .nav-links a {
-            transition: opacity 0.3s ease;
-        }
+    button {
+      font-family: inherit;
+    }
 
-        .nav-links a:hover {
-            opacity: 0.6;
-        }
 
-        .book-button {
-            background: #87967e;
-            color: white;
-            padding: 12px 22px;
-            border-radius: 30px;
-            font-size: 13px;
-            letter-spacing: 0.5px;
-        }
+    /* =========================
+       NAVIGATION
+    ========================= */
 
-        /* HERO */
+    header {
+      width: 100%;
+      background: #fff8f1;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(74, 64, 59, 0.08);
+    }
 
-        .hero {
-            min-height: 650px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            gap: 40px;
-            padding: 70px 7%;
-        }
+    .navbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 18px 30px;
 
-        .hero-content {
-            max-width: 560px;
-        }
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
 
-        .hero h1 {
-            font-size: clamp(48px, 5vw, 76px);
-            line-height: 1.05;
-            color: #6b5849;
-            margin-bottom: 28px;
-        }
+    .logo {
+      width: 170px;
+      height: auto;
+    }
 
-        .hero-description {
-            max-width: 480px;
-            font-size: 17px;
-            color: #75685d;
-            margin-bottom: 35px;
-        }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
 
-        .hero-buttons {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-        }
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: #514640;
+      transition: opacity 0.2s ease;
+    }
 
-        .primary-button {
-            display: inline-block;
-            background: #87967e;
-            color: white;
-            padding: 15px 25px;
-            border-radius: 30px;
-            font-size: 14px;
-        }
+    .nav-links a:hover {
+      opacity: 0.6;
+    }
 
-        .secondary-button {
-            display: inline-block;
-            border: 1px solid #9b8b7c;
-            color: #6d5b4d;
-            padding: 14px 25px;
-            border-radius: 30px;
-            font-size: 14px;
-        }
 
-        .hero-image {
-            min-height: 500px;
-            border-radius: 220px 220px 30px 30px;
-            background:
-                linear-gradient(rgba(255,248,241,0.08), rgba(255,248,241,0.08)),
-                url("https://images.unsplash.com/photo-1549068222-7c0c6a9a8f1c?auto=format&fit=crop&w=1200&q=85")
-                center / cover;
-        }
+    /* =========================
+       HERO
+    ========================= */
 
-        /* FEATURES */
+    .hero {
+      min-height: calc(100vh - 85px);
 
-        .features {
-            padding: 70px 7%;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            border-top: 1px solid rgba(109,91,77,0.07);
-            border-bottom: 1px solid rgba(109,91,77,0.07);
-        }
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-        .feature {
-            text-align: center;
-            padding: 20px;
-        }
+      padding: 70px 30px 90px;
+    }
 
-        .feature-icon {
-            width: 90px;
-            height: 90px;
-            margin: 0 auto 22px;
-            border-radius: 50%;
-            background: #eee3d5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 35px;
-        }
+    .hero-container {
+      max-width: 1200px;
+      width: 100%;
 
-        .feature h3 {
-            font-size: 27px;
-            margin-bottom: 10px;
-            color: #6d5b4d;
-        }
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 70px;
+    }
 
-        .feature p {
-            font-size: 14px;
-            color: #807268;
-        }
+    .hero-text {
+      max-width: 560px;
+    }
 
-        /* ABOUT */
+    .hero-kicker {
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 18px;
+      color: #927d70;
+    }
 
-        .about {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-        }
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(48px, 6vw, 78px);
+      line-height: 1.05;
+      font-weight: 600;
+      color: #443832;
+      margin-bottom: 25px;
+    }
 
-        .about-image {
-            min-height: 500px;
-            background:
-                url("https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?auto=format&fit=crop&w=1200&q=85")
-                center / cover;
-        }
+    .hero h1 span {
+      display: block;
+    }
 
-        .about-content {
-            padding: 70px 10%;
-        }
+    .hero-description {
+      font-size: 18px;
+      line-height: 1.8;
+      max-width: 500px;
+      margin-bottom: 35px;
+      color: #665952;
+    }
 
-        .eyebrow {
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-size: 12px;
-            margin-bottom: 15px;
-            color: #918276;
-        }
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
 
-        .about h2 {
-            font-size: 54px;
-            margin-bottom: 25px;
-            color: #6b5849;
-        }
+    .button-primary,
+    .button-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
 
-        .about p {
-            font-size: 16px;
-            color: #75685d;
-            margin-bottom: 30px;
-            max-width: 520px;
-        }
+      padding: 13px 24px;
+      border-radius: 30px;
 
-        /* CTA */
+      font-size: 14px;
+      font-weight: 600;
 
-        .cta {
-            text-align: center;
-            padding: 110px 20px;
-            background: #f6ede3;
-        }
+      transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+    }
 
-        .cta h2 {
-            font-size: 50px;
-            margin-bottom: 25px;
-            color: #6b5849;
-        }
+    .button-primary {
+      background: #4a403b;
+      color: white;
+    }
 
-        /* FOOTER */
+    .button-secondary {
+      border: 1px solid #b8a69a;
+      color: #4a403b;
+      background: transparent;
+    }
 
-        footer {
-            background: #b8c1ae;
-            color: white;
-            padding: 45px 7%;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 25px;
-        }
+    .button-primary:hover,
+    .button-secondary:hover {
+      transform: translateY(-2px);
+      opacity: 0.85;
+    }
 
-        footer div {
-            font-size: 14px;
-        }
 
-        /* MOBILE */
+    /* =========================
+       HERO IMAGE
+    ========================= */
 
-        @media (max-width: 900px) {
+    .hero-image-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-            .nav-links {
-                display: none;
-            }
+    .hero-image {
+      width: min(100%, 520px);
+      border-radius: 30px;
+      object-fit: contain;
+    }
 
-            .hero {
-                grid-template-columns: 1fr;
-                padding: 50px 7%;
-            }
 
-            .hero-image {
-                min-height: 420px;
-            }
+    /* =========================
+       SECTION GENERAL
+    ========================= */
 
-            .features {
-                grid-template-columns: 1fr 1fr;
-            }
+    section {
+      padding: 100px 30px;
+    }
 
-            .about {
-                grid-template-columns: 1fr;
-            }
+    .section-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
-            .about-image {
-                min-height: 400px;
-            }
-        }
+    .section-heading {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 55px;
+    }
 
-        @media (max-width: 600px) {
+    .section-heading .small-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+      color: #927d70;
+      margin-bottom: 12px;
+    }
 
-            .navbar {
-                padding: 20px 5%;
-            }
+    .section-heading h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 5vw, 56px);
+      line-height: 1.15;
+      color: #443832;
+      margin-bottom: 18px;
+    }
 
-            .hero h1 {
-                font-size: 48px;
-            }
+    .section-heading p {
+      font-size: 17px;
+      color: #6b5d56;
+      line-height: 1.8;
+    }
 
-            .features {
-                grid-template-columns: 1fr;
-            }
 
-            .about h2,
-            .cta h2 {
-                font-size: 40px;
-            }
-        }
-    </style>
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      background: #f8eee6;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-text h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 36px;
+      color: #443832;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      font-size: 17px;
+      line-height: 1.9;
+      color: #675a53;
+      margin-bottom: 18px;
+    }
+
+    .about-card {
+      background: #fff8f1;
+      border-radius: 30px;
+      padding: 45px;
+      box-shadow: 0 15px 50px rgba(74, 64, 59, 0.06);
+    }
+
+    .about-card h4 {
+      font-family: "Playfair Display", serif;
+      font-size: 30px;
+      margin-bottom: 18px;
+      color: #443832;
+    }
+
+    .about-card p {
+      color: #675a53;
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       EXPERIENCES
+    ========================= */
+
+    .experiences {
+      background: #fff8f1;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .experience-card {
+      background: #ffffff;
+      border-radius: 25px;
+      padding: 35px 30px;
+
+      border: 1px solid rgba(74, 64, 59, 0.06);
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(74, 64, 59, 0.08);
+    }
+
+    .experience-icon {
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+
+    .experience-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 27px;
+      color: #443832;
+      margin-bottom: 12px;
+    }
+
+    .experience-card p {
+      color: #6b5d56;
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       CAFE
+    ========================= */
+
+    .cafe {
+      background: #f8eee6;
+    }
+
+    .cafe-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .cafe-content p {
+      font-size: 18px;
+      line-height: 1.9;
+      color: #675a53;
+      margin-bottom: 25px;
+    }
+
+
+    /* =========================
+       PLAY
+    ========================= */
+
+    .play {
+      background: #fff8f1;
+    }
+
+    .play-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .play-card {
+      padding: 40px;
+      border-radius: 28px;
+      background: #ffffff;
+      border: 1px solid rgba(74, 64, 59, 0.06);
+    }
+
+    .play-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 30px;
+      margin-bottom: 15px;
+      color: #443832;
+    }
+
+    .play-card p {
+      color: #6b5d56;
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       PARTIES
+    ========================= */
+
+    .parties {
+      background: #f8eee6;
+    }
+
+    .parties-content {
+      max-width: 750px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .parties-content p {
+      font-size: 18px;
+      line-height: 1.9;
+      color: #675a53;
+      margin-bottom: 30px;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      background: #fff8f1;
+    }
+
+    .contact-box {
+      max-width: 850px;
+      margin: 0 auto;
+
+      background: #ffffff;
+      border-radius: 30px;
+
+      padding: 55px 40px;
+      text-align: center;
+
+      border: 1px solid rgba(74, 64, 59, 0.06);
+    }
+
+    .contact-box h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 45px;
+      color: #443832;
+      margin-bottom: 18px;
+    }
+
+    .contact-box p {
+      font-size: 17px;
+      color: #6b5d56;
+      margin-bottom: 25px;
+    }
+
+    .contact-email {
+      display: inline-block;
+      font-weight: 600;
+      color: #443832;
+      border-bottom: 1px solid #b8a69a;
+      padding-bottom: 4px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #443832;
+      color: #fff8f1;
+      padding: 45px 30px;
+    }
+
+    .footer-container {
+      max-width: 1100px;
+      margin: 0 auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .footer-logo {
+      width: 145px;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-text {
+      font-size: 13px;
+      opacity: 0.8;
+    }
+
+
+    /* =========================
+       MOBILE NAVIGATION
+    ========================= */
+
+    .mobile-menu {
+      display: none;
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .navbar {
+        padding: 16px 20px;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .nav-links a {
+        font-size: 13px;
+      }
+
+      .hero-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .hero-text {
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-image-wrapper {
+        order: -1;
+      }
+
+      .hero-image {
+        max-width: 400px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .experience-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .play-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+
+    @media (max-width: 650px) {
+
+      .navbar {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+      }
+
+      .hero {
+        padding-top: 50px;
+      }
+
+      section {
+        padding: 75px 20px;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      .about-card,
+      .play-card,
+      .contact-box {
+        padding: 30px 25px;
+      }
+
+      .contact-box h2 {
+        font-size: 36px;
+      }
+    }
+
+  </style>
 </head>
+
 
 <body>
 
-    <header class="navbar">
+  <!-- =========================
+       HEADER
+  ========================= -->
 
-        <div class="nav-logo">
-    <img src="logo-little-dream-lab.png" alt="Little Dream Lab">
-</div>
+  <header>
 
-        <nav class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">Play</a>
-            <a href="#">Café</a>
-            <a href="#">Parties</a>
-            <a href="#">Activities</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </nav>
+    <nav class="navbar">
 
-        <a href="#" class="book-button">
-            BOOK NOW
-        </a>
+      <a href="#home">
+        <img
+          src="images/logo-little-dream-lab.png"
+          alt="Little Dream Lab"
+          class="logo"
+        >
+      </a>
 
-    </header>
+      <ul class="nav-links">
 
+        <li>
+          <a href="#home">Home</a>
+        </li>
 
-    <main>
+        <li>
+          <a href="#about">About Us</a>
+        </li>
 
-        <!-- HERO -->
+        <li>
+          <a href="#cafe">Café</a>
+        </li>
 
-        <section class="hero">
+        <li>
+          <a href="#play">Play</a>
+        </li>
 
-            <div class="hero-content">
+        <li>
+          <a href="#parties">Parties</a>
+        </li>
 
-                <h1>
-                    A place to play,
-                    connect and grow
-                </h1>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
 
-                <p class="hero-description">
-                    Little Dream Lab is a family café, indoor playground
-                    and creative community space where children play,
-                    parents relax and beautiful moments happen.
-                </p>
+      </ul>
 
-                <div class="hero-buttons">
+    </nav>
 
-                    <a href="#" class="primary-button">
-                        BOOK A PLAY SESSION
-                    </a>
-
-                    <a href="#" class="secondary-button">
-                        EXPLORE LITTLE DREAM LAB →
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div class="hero-image"></div>
-
-        </section>
+  </header>
 
 
-        <!-- FEATURES -->
+  <!-- =========================
+       HERO / HOME
+  ========================= -->
 
-        <section class="features">
+  <main>
 
-            <div class="feature">
+    <section id="home" class="hero">
 
-                <div class="feature-icon">☕</div>
+      <div class="hero-container">
 
-                <h3>Café</h3>
+        <div class="hero-text">
 
-                <p>
-                    Great coffee, fresh food and sweet treats
-                    for the whole family.
-                </p>
+          <div class="hero-kicker">
+            Family Café · Play · Create · Connect
+          </div>
 
-            </div>
+          <h1>
+            Little
+            <span>Dream Lab</span>
+          </h1>
 
+          <p class="hero-description">
+            A warm and inspiring space where children can play,
+            create and explore, while families enjoy beautiful moments
+            together.
+          </p>
 
-            <div class="feature">
+          <div class="hero-buttons">
 
-                <div class="feature-icon">🧸</div>
-
-                <h3>Playground</h3>
-
-                <p>
-                    A safe and inspiring space for
-                    little explorers.
-                </p>
-
-            </div>
-
-
-            <div class="feature">
-
-                <div class="feature-icon">🎂</div>
-
-                <h3>Birthday Parties</h3>
-
-                <p>
-                    Beautiful birthdays made easy.
-                </p>
-
-            </div>
-
-
-            <div class="feature">
-
-                <div class="feature-icon">🎨</div>
-
-                <h3>Creative Activities</h3>
-
-                <p>
-                    Workshops, events and hands-on fun
-                    for curious minds.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- ABOUT -->
-
-        <section class="about">
-
-            <div class="about-image"></div>
-
-            <div class="about-content">
-
-                <div class="eyebrow">
-                    Welcome to
-                </div>
-
-                <h2>
-                    Little Dream Lab
-                </h2>
-
-                <p>
-                    We've created a warm and welcoming space
-                    where families can enjoy good coffee,
-                    delicious food and meaningful play.
-                    Here, little ones can explore, create
-                    and make new friends — while you take
-                    a moment to relax, work or simply enjoy
-                    the day.
-                </p>
-
-                <a href="#" class="primary-button">
-                    LEARN MORE →
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- CTA -->
-
-        <section class="cta">
-
-            <div class="eyebrow">
-                Let's make beautiful
-            </div>
-
-            <h2>
-                Memories Together
-            </h2>
-
-            <a href="#" class="primary-button">
-                BOOK NOW →
+            <a href="#about" class="button-primary">
+              Discover Little Dream Lab
             </a>
 
-        </section>
+            <a href="#contact" class="button-secondary">
+              Get in touch
+            </a>
 
-    </main>
+          </div>
 
-
-    <footer>
-
-        <div>
-            📍 Diemen, Netherlands
         </div>
 
-        <div>
-            ◷ Opening Hours
+
+        <div class="hero-image-wrapper">
+
+          <img
+            src="images/logo-little-dream-lab.png"
+            alt="Little Dream Lab"
+            class="hero-image"
+          >
+
         </div>
 
-        <div>
-            ◎ Follow us
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section id="about" class="about">
+
+      <div class="section-container">
+
+        <div class="section-heading">
+
+          <div class="small-title">
+            About Little Dream Lab
+          </div>
+
+          <h2>
+            A little world made for big dreams.
+          </h2>
+
+          <p>
+            Little Dream Lab is being created as a welcoming space
+            where families can slow down, connect and enjoy time
+            together.
+          </p>
+
         </div>
 
-        <div>
-            ♡ Little Dream Lab
+
+        <div class="about-grid">
+
+          <div class="about-text">
+
+            <h3>
+              More than a café.
+            </h3>
+
+            <p>
+              Little Dream Lab brings together a family café,
+              indoor play and creative experiences in one warm,
+              thoughtfully designed environment.
+            </p>
+
+            <p>
+              Our goal is to create a place where children feel
+              free to explore and families feel comfortable staying,
+              connecting and making memories.
+            </p>
+
+          </div>
+
+
+          <div class="about-card">
+
+            <h4>
+              Our little philosophy
+            </h4>
+
+            <p>
+              We believe childhood is full of small magical moments.
+              A cup of coffee, a new friendship, a drawing, a story,
+              a game or simply having time together can become a
+              beautiful memory.
+            </p>
+
+          </div>
+
         </div>
 
-    </footer>
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXPERIENCES
+    ========================= -->
+
+    <section class="experiences">
+
+      <div class="section-container">
+
+        <div class="section-heading">
+
+          <div class="small-title">
+            What we imagine
+          </div>
+
+          <h2>
+            A space to play, create and connect.
+          </h2>
+
+          <p>
+            Every part of Little Dream Lab is designed around
+            family time and children's imagination.
+          </p>
+
+        </div>
+
+
+        <div class="experience-grid">
+
+
+          <div class="experience-card">
+
+            <div class="experience-icon">
+              ☕
+            </div>
+
+            <h3>
+              Family Café
+            </h3>
+
+            <p>
+              A cosy café where parents can enjoy good coffee
+              and a relaxed moment while staying close to their
+              little ones.
+            </p>
+
+          </div>
+
+
+          <div class="experience-card">
+
+            <div class="experience-icon">
+              ✨
+            </div>
+
+            <h3>
+              Creative Play
+            </h3>
+
+            <p>
+              Spaces designed to encourage imagination,
+              discovery and independent play in a warm environment.
+            </p>
+
+          </div>
+
+
+          <div class="experience-card">
+
+            <div class="experience-icon">
+              🎈
+            </div>
+
+            <h3>
+              Special Moments
+            </h3>
+
+            <p>
+              A place for birthdays, celebrations, workshops
+              and little family moments worth remembering.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CAFÉ
+    ========================= -->
+
+    <section id="cafe" class="cafe">
+
+      <div class="section-container">
+
+        <div class="section-heading">
+
+          <div class="small-title">
+            The Café
+          </div>
+
+          <h2>
+            Coffee for grown-ups.
+            Little moments for everyone.
+          </h2>
+
+        </div>
+
+
+        <div class="cafe-content">
+
+          <p>
+            Our café is imagined as a calm and welcoming place
+            for parents, grandparents and families to enjoy
+            quality coffee and simple delicious treats.
+          </p>
+
+          <p>
+            While children play and explore, grown-ups can sit,
+            connect and enjoy a moment for themselves.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PLAY
+    ========================= -->
+
+    <section id="play" class="play">
+
+      <div class="section-container">
+
+        <div class="section-heading">
+
+          <div class="small-title">
+            Play
+          </div>
+
+          <h2>
+            Little explorers welcome.
+          </h2>
+
+          <p>
+            Our play areas will be thoughtfully designed around
+            different stages of early childhood.
+          </p>
+
+        </div>
+
+
+        <div class="play-grid">
+
+
+          <div class="play-card">
+
+            <h3>
+              Baby Play
+            </h3>
+
+            <p>
+              A gentle environment for our youngest visitors,
+              with age-appropriate play and space to explore safely.
+            </p>
+
+          </div>
+
+
+          <div class="play-card">
+
+            <h3>
+              Little Explorers
+            </h3>
+
+            <p>
+              A playful environment for toddlers and young children
+              where imagination, movement and discovery come together.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PARTIES
+    ========================= -->
+
+    <section id="parties" class="parties">
+
+      <div class="section-container">
+
+        <div class="section-heading">
+
+          <div class="small-title">
+            Parties & Celebrations
+          </div>
+
+          <h2>
+            Celebrate the little things.
+          </h2>
+
+        </div>
+
+
+        <div class="parties-content">
+
+          <p>
+            From little birthday celebrations to creative
+            gatherings, Little Dream Lab will offer families
+            a beautiful space to celebrate special moments.
+          </p>
+
+          <p>
+            More details about our party packages and experiences
+            will be announced soon.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section id="contact" class="contact">
+
+      <div class="section-container">
+
+        <div class="contact-box">
+
+          <h2>
+            Come dream with us.
+          </h2>
+
+          <p>
+            Little Dream Lab is growing, and we cannot wait
+            to share this little world with you.
+          </p>
+
+          <a
+            href="mailto:hello@littledreamlab.nl"
+            class="contact-email"
+          >
+            hello@littledreamlab.nl
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="footer-container">
+
+      <img
+        src="images/logo-little-dream-lab.png"
+        alt="Little Dream Lab"
+        class="footer-logo"
+      >
+
+      <div class="footer-text">
+        © 2026 Little Dream Lab. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
 
 </body>
 </html>
