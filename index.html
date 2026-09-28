@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Little Dream Lab | Family Café & Indoor Playground</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #fff8f1;
+            color: #6d5b4d;
+            font-family: "DM Sans", sans-serif;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: "Playfair Display", serif;
+            font-weight: 500;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* NAVIGATION */
+
+        .navbar {
+            width: 100%;
+            padding: 24px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(109, 91, 77, 0.08);
+            background: rgba(255, 248, 241, 0.96);
+        }
+
+        .nav-logo {
+            font-family: "Playfair Display", serif;
+            font-size: 25px;
+            letter-spacing: 0.5px;
+            color: #665548;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .nav-links a {
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.6;
+        }
+
+        .book-button {
+            background: #87967e;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 30px;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 650px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 40px;
+            padding: 70px 7%;
+        }
+
+        .hero-content {
+            max-width: 560px;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 5vw, 76px);
+            line-height: 1.05;
+            color: #6b5849;
+            margin-bottom: 28px;
+        }
+
+        .hero-description {
+            max-width: 480px;
+            font-size: 17px;
+            color: #75685d;
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .primary-button {
+            display: inline-block;
+            background: #87967e;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-size: 14px;
+        }
+
+        .secondary-button {
+            display: inline-block;
+            border: 1px solid #9b8b7c;
+            color: #6d5b4d;
+            padding: 14px 25px;
+            border-radius: 30px;
+            font-size: 14px;
+        }
+
+        .hero-image {
+            min-height: 500px;
+            border-radius: 220px 220px 30px 30px;
+            background:
+                linear-gradient(rgba(255,248,241,0.08), rgba(255,248,241,0.08)),
+                url("https://images.unsplash.com/photo-1549068222-7c0c6a9a8f1c?auto=format&fit=crop&w=1200&q=85")
+                center / cover;
+        }
+
+        /* FEATURES */
+
+        .features {
+            padding: 70px 7%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            border-top: 1px solid rgba(109,91,77,0.07);
+            border-bottom: 1px solid rgba(109,91,77,0.07);
+        }
+
+        .feature {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .feature-icon {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 22px;
+            border-radius: 50%;
+            background: #eee3d5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+        }
+
+        .feature h3 {
+            font-size: 27px;
+            margin-bottom: 10px;
+            color: #6d5b4d;
+        }
+
+        .feature p {
+            font-size: 14px;
+            color: #807268;
+        }
+
+        /* ABOUT */
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+
+        .about-image {
+            min-height: 500px;
+            background:
+                url("https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?auto=format&fit=crop&w=1200&q=85")
+                center / cover;
+        }
+
+        .about-content {
+            padding: 70px 10%;
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 12px;
+            margin-bottom: 15px;
+            color: #918276;
+        }
+
+        .about h2 {
+            font-size: 54px;
+            margin-bottom: 25px;
+            color: #6b5849;
+        }
+
+        .about p {
+            font-size: 16px;
+            color: #75685d;
+            margin-bottom: 30px;
+            max-width: 520px;
+        }
+
+        /* CTA */
+
+        .cta {
+            text-align: center;
+            padding: 110px 20px;
+            background: #f6ede3;
+        }
+
+        .cta h2 {
+            font-size: 50px;
+            margin-bottom: 25px;
+            color: #6b5849;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #b8c1ae;
+            color: white;
+            padding: 45px 7%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        footer div {
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 50px 7%;
+            }
+
+            .hero-image {
+                min-height: 420px;
+            }
+
+            .features {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                min-height: 400px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .navbar {
+                padding: 20px 5%;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .about h2,
+            .cta h2 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="nav-logo">
+            Little Dream Lab
+        </div>
+
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Play</a>
+            <a href="#">Café</a>
+            <a href="#">Parties</a>
+            <a href="#">Activities</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <a href="#" class="book-button">
+            BOOK NOW
+        </a>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <h1>
+                    A place to play,
+                    connect and grow
+                </h1>
+
+                <p class="hero-description">
+                    Little Dream Lab is a family café, indoor playground
+                    and creative community space where children play,
+                    parents relax and beautiful moments happen.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#" class="primary-button">
+                        BOOK A PLAY SESSION
+                    </a>
+
+                    <a href="#" class="secondary-button">
+                        EXPLORE LITTLE DREAM LAB →
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-image"></div>
+
+        </section>
+
+
+        <!-- FEATURES -->
+
+        <section class="features">
+
+            <div class="feature">
+
+                <div class="feature-icon">☕</div>
+
+                <h3>Café</h3>
+
+                <p>
+                    Great coffee, fresh food and sweet treats
+                    for the whole family.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">🧸</div>
+
+                <h3>Playground</h3>
+
+                <p>
+                    A safe and inspiring space for
+                    little explorers.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">🎂</div>
+
+                <h3>Birthday Parties</h3>
+
+                <p>
+                    Beautiful birthdays made easy.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">🎨</div>
+
+                <h3>Creative Activities</h3>
+
+                <p>
+                    Workshops, events and hands-on fun
+                    for curious minds.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
+        <section class="about">
+
+            <div class="about-image"></div>
+
+            <div class="about-content">
+
+                <div class="eyebrow">
+                    Welcome to
+                </div>
+
+                <h2>
+                    Little Dream Lab
+                </h2>
+
+                <p>
+                    We've created a warm and welcoming space
+                    where families can enjoy good coffee,
+                    delicious food and meaningful play.
+                    Here, little ones can explore, create
+                    and make new friends — while you take
+                    a moment to relax, work or simply enjoy
+                    the day.
+                </p>
+
+                <a href="#" class="primary-button">
+                    LEARN MORE →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+
+        <section class="cta">
+
+            <div class="eyebrow">
+                Let's make beautiful
+            </div>
+
+            <h2>
+                Memories Together
+            </h2>
+
+            <a href="#" class="primary-button">
+                BOOK NOW →
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div>
+            📍 Diemen, Netherlands
+        </div>
+
+        <div>
+            ◷ Opening Hours
+        </div>
+
+        <div>
+            ◎ Follow us
+        </div>
+
+        <div>
+            ♡ Little Dream Lab
+        </div>
+
+    </footer>
+
+</body>
+</html>
