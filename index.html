@@ -1,17 +1,22 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Little Dream Lab | Family Café, Indoor Playground & Creative Community Space</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Little Dream Lab</title>
 
   <meta
     name="description"
-    content="Little Dream Lab is a family café, indoor playground and creative community space designed for children and families."
+    content="Little Dream Lab — Family Café, Indoor Playground and Creative Community Space."
   >
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -22,14 +27,14 @@
 
   <style>
 
-    /* =========================
-       GENERAL
-    ========================= */
+    /* ==============================
+       RESET
+    ============================== */
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -40,57 +45,66 @@
       font-family: "DM Sans", sans-serif;
       background: #fff8f1;
       color: #4a403b;
-      line-height: 1.6;
+      overflow-x: hidden;
     }
 
     img {
       max-width: 100%;
-      display: block;
+      height: auto;
     }
 
     a {
-      text-decoration: none;
       color: inherit;
-    }
-
-    button {
-      font-family: inherit;
+      text-decoration: none;
     }
 
 
-    /* =========================
-       NAVIGATION
-    ========================= */
+    /* ==============================
+       HEADER
+    ============================== */
 
     header {
       width: 100%;
       background: #fff8f1;
+      border-bottom: 1px solid rgba(74, 64, 59, 0.08);
       position: sticky;
       top: 0;
       z-index: 1000;
-      border-bottom: 1px solid rgba(74, 64, 59, 0.08);
     }
 
     .navbar {
+      width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 18px 30px;
+
+      padding: 16px 30px;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       gap: 30px;
     }
 
+    .logo-link {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
     .logo {
-      width: 170px;
+      display: block;
+      width: 165px;
       height: auto;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 28px;
+      justify-content: flex-end;
+
+      gap: 25px;
+
       list-style: none;
     }
 
@@ -98,6 +112,9 @@
       font-size: 14px;
       font-weight: 500;
       color: #514640;
+
+      white-space: nowrap;
+
       transition: opacity 0.2s ease;
     }
 
@@ -106,77 +123,90 @@
     }
 
 
-    /* =========================
+    /* ==============================
        HERO
-    ========================= */
+    ============================== */
 
     .hero {
-      min-height: calc(100vh - 85px);
+      width: 100%;
+      min-height: calc(100vh - 80px);
 
       display: flex;
       align-items: center;
-      justify-content: center;
 
       padding: 70px 30px 90px;
     }
 
     .hero-container {
-      max-width: 1200px;
       width: 100%;
+      max-width: 1100px;
+
+      margin: 0 auto;
 
       display: grid;
       grid-template-columns: 1fr 1fr;
+
       align-items: center;
+
       gap: 70px;
     }
 
     .hero-text {
-      max-width: 560px;
+      max-width: 550px;
     }
 
     .hero-kicker {
-      font-size: 14px;
+      margin-bottom: 18px;
+
+      font-size: 13px;
+      font-weight: 600;
+
       letter-spacing: 2px;
       text-transform: uppercase;
-      font-weight: 600;
-      margin-bottom: 18px;
+
       color: #927d70;
     }
 
     .hero h1 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(48px, 6vw, 78px);
-      line-height: 1.05;
-      font-weight: 600;
-      color: #443832;
       margin-bottom: 25px;
-    }
 
-    .hero h1 span {
-      display: block;
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(48px, 6vw, 76px);
+
+      line-height: 1.05;
+
+      font-weight: 600;
+
+      color: #443832;
     }
 
     .hero-description {
+      max-width: 500px;
+
+      margin-bottom: 32px;
+
       font-size: 18px;
       line-height: 1.8;
-      max-width: 500px;
-      margin-bottom: 35px;
+
       color: #665952;
     }
 
     .hero-buttons {
       display: flex;
-      gap: 15px;
       flex-wrap: wrap;
+
+      gap: 14px;
     }
 
-    .button-primary,
-    .button-secondary {
+    .button {
       display: inline-flex;
+
       align-items: center;
       justify-content: center;
 
-      padding: 13px 24px;
+      padding: 13px 23px;
+
       border-radius: 30px;
 
       font-size: 14px;
@@ -185,6 +215,11 @@
       transition:
         transform 0.2s ease,
         opacity 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      opacity: 0.85;
     }
 
     .button-primary {
@@ -198,76 +233,90 @@
       background: transparent;
     }
 
-    .button-primary:hover,
-    .button-secondary:hover {
-      transform: translateY(-2px);
-      opacity: 0.85;
-    }
 
-
-    /* =========================
-       HERO IMAGE
-    ========================= */
+    /* ==============================
+       HERO IMAGE AREA
+    ============================== */
 
     .hero-image-wrapper {
+      width: 100%;
+
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
     }
 
     .hero-image {
-      width: min(100%, 520px);
-      border-radius: 30px;
+      display: block;
+
+      width: 100%;
+      max-width: 450px;
+
+      height: auto;
+
       object-fit: contain;
     }
 
 
-    /* =========================
-       SECTION GENERAL
-    ========================= */
+    /* ==============================
+       SECTIONS
+    ============================== */
 
     section {
+      width: 100%;
       padding: 100px 30px;
     }
 
     .section-container {
+      width: 100%;
       max-width: 1100px;
+
       margin: 0 auto;
     }
 
     .section-heading {
-      text-align: center;
       max-width: 700px;
+
       margin: 0 auto 55px;
+
+      text-align: center;
     }
 
-    .section-heading .small-title {
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: 600;
-      color: #927d70;
+    .small-title {
       margin-bottom: 12px;
+
+      font-size: 13px;
+      font-weight: 600;
+
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      color: #927d70;
     }
 
     .section-heading h2 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(38px, 5vw, 56px);
-      line-height: 1.15;
-      color: #443832;
       margin-bottom: 18px;
+
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(38px, 5vw, 56px);
+
+      line-height: 1.15;
+
+      color: #443832;
     }
 
     .section-heading p {
       font-size: 17px;
-      color: #6b5d56;
       line-height: 1.8;
+
+      color: #6b5d56;
     }
 
 
-    /* =========================
+    /* ==============================
        ABOUT
-    ========================= */
+    ============================== */
 
     .about {
       background: #f8eee6;
@@ -275,48 +324,62 @@
 
     .about-grid {
       display: grid;
+
       grid-template-columns: 1fr 1fr;
-      gap: 70px;
+
+      gap: 60px;
+
       align-items: center;
     }
 
     .about-text h3 {
-      font-family: "Playfair Display", serif;
-      font-size: 36px;
-      color: #443832;
       margin-bottom: 20px;
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 36px;
+
+      color: #443832;
     }
 
     .about-text p {
+      margin-bottom: 18px;
+
       font-size: 17px;
       line-height: 1.9;
+
       color: #675a53;
-      margin-bottom: 18px;
     }
 
     .about-card {
-      background: #fff8f1;
-      border-radius: 30px;
       padding: 45px;
+
+      background: #fff8f1;
+
+      border-radius: 30px;
+
       box-shadow: 0 15px 50px rgba(74, 64, 59, 0.06);
     }
 
     .about-card h4 {
-      font-family: "Playfair Display", serif;
-      font-size: 30px;
       margin-bottom: 18px;
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 30px;
+
       color: #443832;
     }
 
     .about-card p {
-      color: #675a53;
       line-height: 1.8;
+      color: #675a53;
     }
 
 
-    /* =========================
+    /* ==============================
        EXPERIENCES
-    ========================= */
+    ============================== */
 
     .experiences {
       background: #fff8f1;
@@ -324,48 +387,47 @@
 
     .experience-grid {
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
+
       gap: 25px;
     }
 
     .experience-card {
-      background: #ffffff;
-      border-radius: 25px;
       padding: 35px 30px;
 
+      background: white;
+
+      border-radius: 25px;
+
       border: 1px solid rgba(74, 64, 59, 0.06);
-
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-    }
-
-    .experience-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(74, 64, 59, 0.08);
     }
 
     .experience-icon {
-      font-size: 35px;
       margin-bottom: 20px;
+
+      font-size: 34px;
     }
 
     .experience-card h3 {
-      font-family: "Playfair Display", serif;
-      font-size: 27px;
-      color: #443832;
       margin-bottom: 12px;
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 27px;
+
+      color: #443832;
     }
 
     .experience-card p {
-      color: #6b5d56;
       line-height: 1.7;
+      color: #6b5d56;
     }
 
 
-    /* =========================
-       CAFE
-    ========================= */
+    /* ==============================
+       CAFÉ
+    ============================== */
 
     .cafe {
       background: #f8eee6;
@@ -373,57 +435,72 @@
 
     .cafe-content {
       max-width: 800px;
+
       margin: 0 auto;
+
       text-align: center;
     }
 
     .cafe-content p {
+      margin-bottom: 25px;
+
       font-size: 18px;
       line-height: 1.9;
+
       color: #675a53;
-      margin-bottom: 25px;
     }
 
 
-    /* =========================
+    /* ==============================
        PLAY
-    ========================= */
+    ============================== */
 
     .play {
       background: #fff8f1;
     }
 
     .play-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
       max-width: 900px;
+
       margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 30px;
     }
 
     .play-card {
       padding: 40px;
+
+      background: white;
+
       border-radius: 28px;
-      background: #ffffff;
+
       border: 1px solid rgba(74, 64, 59, 0.06);
     }
 
     .play-card h3 {
-      font-family: "Playfair Display", serif;
-      font-size: 30px;
       margin-bottom: 15px;
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 30px;
+
       color: #443832;
     }
 
     .play-card p {
-      color: #6b5d56;
       line-height: 1.8;
+
+      color: #6b5d56;
     }
 
 
-    /* =========================
+    /* ==============================
        PARTIES
-    ========================= */
+    ============================== */
 
     .parties {
       background: #f8eee6;
@@ -431,21 +508,25 @@
 
     .parties-content {
       max-width: 750px;
+
       margin: 0 auto;
+
       text-align: center;
     }
 
     .parties-content p {
+      margin-bottom: 25px;
+
       font-size: 18px;
       line-height: 1.9;
+
       color: #675a53;
-      margin-bottom: 30px;
     }
 
 
-    /* =========================
+    /* ==============================
        CONTACT
-    ========================= */
+    ============================== */
 
     .contact {
       background: #fff8f1;
@@ -453,62 +534,82 @@
 
     .contact-box {
       max-width: 850px;
+
       margin: 0 auto;
 
-      background: #ffffff;
+      padding: 55px 40px;
+
+      background: white;
+
       border-radius: 30px;
 
-      padding: 55px 40px;
       text-align: center;
 
       border: 1px solid rgba(74, 64, 59, 0.06);
     }
 
     .contact-box h2 {
-      font-family: "Playfair Display", serif;
-      font-size: 45px;
-      color: #443832;
       margin-bottom: 18px;
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 45px;
+
+      color: #443832;
     }
 
     .contact-box p {
-      font-size: 17px;
-      color: #6b5d56;
       margin-bottom: 25px;
+
+      font-size: 17px;
+
+      color: #6b5d56;
     }
 
     .contact-email {
       display: inline-block;
-      font-weight: 600;
-      color: #443832;
-      border-bottom: 1px solid #b8a69a;
+
       padding-bottom: 4px;
+
+      font-weight: 600;
+
+      color: #443832;
+
+      border-bottom: 1px solid #b8a69a;
     }
 
 
-    /* =========================
+    /* ==============================
        FOOTER
-    ========================= */
+    ============================== */
 
     footer {
-      background: #443832;
-      color: #fff8f1;
       padding: 45px 30px;
+
+      background: #443832;
+
+      color: #fff8f1;
     }
 
     .footer-container {
+      width: 100%;
       max-width: 1100px;
+
       margin: 0 auto;
 
       display: flex;
+
       align-items: center;
       justify-content: space-between;
+
       gap: 30px;
     }
 
     .footer-logo {
+      display: block;
+
       width: 145px;
-      filter: brightness(0) invert(1);
+      height: auto;
     }
 
     .footer-text {
@@ -517,23 +618,14 @@
     }
 
 
-    /* =========================
-       MOBILE NAVIGATION
-    ========================= */
-
-    .mobile-menu {
-      display: none;
-    }
-
-
-    /* =========================
-       RESPONSIVE
-    ========================= */
+    /* ==============================
+       TABLET
+    ============================== */
 
     @media (max-width: 900px) {
 
       .navbar {
-        padding: 16px 20px;
+        padding: 15px 20px;
       }
 
       .nav-links {
@@ -541,16 +633,20 @@
       }
 
       .nav-links a {
-        font-size: 13px;
+        font-size: 12px;
       }
 
       .hero-container {
         grid-template-columns: 1fr;
+
         gap: 50px;
+
+        text-align: center;
       }
 
       .hero-text {
-        text-align: center;
+        max-width: 650px;
+
         margin: 0 auto;
       }
 
@@ -568,11 +664,12 @@
       }
 
       .hero-image {
-        max-width: 400px;
+        max-width: 380px;
       }
 
       .about-grid {
         grid-template-columns: 1fr;
+
         gap: 40px;
       }
 
@@ -586,30 +683,67 @@
 
       .footer-container {
         flex-direction: column;
+
         text-align: center;
       }
     }
 
 
+    /* ==============================
+       MOBILE
+    ============================== */
+
     @media (max-width: 650px) {
 
+      header {
+        position: relative;
+      }
+
       .navbar {
+        padding: 18px 16px;
+
         flex-direction: column;
-        gap: 12px;
+
+        gap: 15px;
+      }
+
+      .logo {
+        width: 150px;
       }
 
       .nav-links {
+        width: 100%;
+
+        display: flex;
+
         flex-wrap: wrap;
+
         justify-content: center;
-        gap: 12px 18px;
+
+        gap: 9px 16px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
       }
 
       .hero {
-        padding-top: 50px;
+        min-height: auto;
+
+        padding: 55px 20px 75px;
       }
 
-      section {
-        padding: 75px 20px;
+      .hero-container {
+        gap: 35px;
+      }
+
+      .hero-image-wrapper {
+        width: 100%;
+      }
+
+      .hero-image {
+        width: 80%;
+        max-width: 320px;
       }
 
       .hero h1 {
@@ -618,17 +752,72 @@
 
       .hero-description {
         font-size: 16px;
+
+        line-height: 1.75;
       }
 
-      .about-card,
-      .play-card,
-      .contact-box {
+      .hero-buttons {
+        flex-direction: column;
+
+        width: 100%;
+
+        max-width: 320px;
+
+        margin: 0 auto;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      section {
+        padding: 75px 20px;
+      }
+
+      .section-heading {
+        margin-bottom: 40px;
+      }
+
+      .section-heading h2 {
+        font-size: 38px;
+      }
+
+      .section-heading p {
+        font-size: 16px;
+      }
+
+      .about-text h3 {
+        font-size: 32px;
+      }
+
+      .about-text p {
+        font-size: 16px;
+      }
+
+      .about-card {
         padding: 30px 25px;
+      }
+
+      .experience-card {
+        padding: 30px 25px;
+      }
+
+      .play-card {
+        padding: 30px 25px;
+      }
+
+      .contact-box {
+        padding: 40px 25px;
       }
 
       .contact-box h2 {
         font-size: 36px;
       }
+
+      footer {
+        padding: 40px 20px;
+      }
+
     }
 
   </style>
@@ -637,21 +826,28 @@
 
 <body>
 
-  <!-- =========================
+
+  <!-- ==============================
        HEADER
-  ========================= -->
+  ============================== -->
 
   <header>
 
     <nav class="navbar">
 
-      <a href="#home">
+      <a
+        href="#home"
+        class="logo-link"
+      >
+
         <img
-          src="images/logo-little-dream-lab.png"
+          src="./images/logo-little-dream-lab.png"
           alt="Little Dream Lab"
           class="logo"
         >
+
       </a>
+
 
       <ul class="nav-links">
 
@@ -686,15 +882,19 @@
   </header>
 
 
-  <!-- =========================
-       HERO / HOME
-  ========================= -->
+  <!-- ==============================
+       HOME
+  ============================== -->
 
   <main>
 
-    <section id="home" class="hero">
+    <section
+      id="home"
+      class="hero"
+    >
 
       <div class="hero-container">
+
 
         <div class="hero-text">
 
@@ -709,17 +909,23 @@
 
           <p class="hero-description">
             A warm and inspiring space where children can play,
-            create and explore, while families enjoy beautiful moments
-            together.
+            create and explore, while families enjoy beautiful
+            moments together.
           </p>
 
           <div class="hero-buttons">
 
-            <a href="#about" class="button-primary">
+            <a
+              href="#about"
+              class="button button-primary"
+            >
               Discover Little Dream Lab
             </a>
 
-            <a href="#contact" class="button-secondary">
+            <a
+              href="#contact"
+              class="button button-secondary"
+            >
               Get in touch
             </a>
 
@@ -728,26 +934,37 @@
         </div>
 
 
+        <!--
+          TEMPORARY HERO IMAGE
+
+          We use the same logo here for now.
+          Later we will replace this with PomPom.
+        -->
+
         <div class="hero-image-wrapper">
 
           <img
-            src="images/logo-little-dream-lab.png"
+            src="./images/logo-little-dream-lab.png"
             alt="Little Dream Lab"
             class="hero-image"
           >
 
         </div>
 
+
       </div>
 
     </section>
 
 
-    <!-- =========================
+    <!-- ==============================
          ABOUT
-    ========================= -->
+    ============================== -->
 
-    <section id="about" class="about">
+    <section
+      id="about"
+      class="about"
+    >
 
       <div class="section-container">
 
@@ -772,6 +989,7 @@
 
         <div class="about-grid">
 
+
           <div class="about-text">
 
             <h3>
@@ -786,8 +1004,8 @@
 
             <p>
               Our goal is to create a place where children feel
-              free to explore and families feel comfortable staying,
-              connecting and making memories.
+              free to explore and families feel comfortable
+              staying, connecting and making memories.
             </p>
 
           </div>
@@ -808,6 +1026,7 @@
 
           </div>
 
+
         </div>
 
       </div>
@@ -815,9 +1034,9 @@
     </section>
 
 
-    <!-- =========================
+    <!-- ==============================
          EXPERIENCES
-    ========================= -->
+    ============================== -->
 
     <section class="experiences">
 
@@ -856,8 +1075,8 @@
 
             <p>
               A cosy café where parents can enjoy good coffee
-              and a relaxed moment while staying close to their
-              little ones.
+              and a relaxed moment while staying close to
+              their little ones.
             </p>
 
           </div>
@@ -875,7 +1094,8 @@
 
             <p>
               Spaces designed to encourage imagination,
-              discovery and independent play in a warm environment.
+              discovery and independent play in a warm
+              environment.
             </p>
 
           </div>
@@ -906,11 +1126,14 @@
     </section>
 
 
-    <!-- =========================
+    <!-- ==============================
          CAFÉ
-    ========================= -->
+    ============================== -->
 
-    <section id="cafe" class="cafe">
+    <section
+      id="cafe"
+      class="cafe"
+    >
 
       <div class="section-container">
 
@@ -948,11 +1171,14 @@
     </section>
 
 
-    <!-- =========================
+    <!-- ==============================
          PLAY
-    ========================= -->
+    ============================== -->
 
-    <section id="play" class="play">
+    <section
+      id="play"
+      class="play"
+    >
 
       <div class="section-container">
 
@@ -998,8 +1224,9 @@
             </h3>
 
             <p>
-              A playful environment for toddlers and young children
-              where imagination, movement and discovery come together.
+              A playful environment for toddlers and young
+              children where imagination, movement and discovery
+              come together.
             </p>
 
           </div>
@@ -1012,11 +1239,14 @@
     </section>
 
 
-    <!-- =========================
+    <!-- ==============================
          PARTIES
-    ========================= -->
+    ============================== -->
 
-    <section id="parties" class="parties">
+    <section
+      id="parties"
+      class="parties"
+    >
 
       <div class="section-container">
 
@@ -1042,8 +1272,8 @@
           </p>
 
           <p>
-            More details about our party packages and experiences
-            will be announced soon.
+            More details about our party packages and
+            experiences will be announced soon.
           </p>
 
         </div>
@@ -1053,11 +1283,14 @@
     </section>
 
 
-    <!-- =========================
+    <!-- ==============================
          CONTACT
-    ========================= -->
+    ============================== -->
 
-    <section id="contact" class="contact">
+    <section
+      id="contact"
+      class="contact"
+    >
 
       <div class="section-container">
 
@@ -1088,16 +1321,16 @@
   </main>
 
 
-  <!-- =========================
+  <!-- ==============================
        FOOTER
-  ========================= -->
+  ============================== -->
 
   <footer>
 
     <div class="footer-container">
 
       <img
-        src="images/logo-little-dream-lab.png"
+        src="./images/logo-little-dream-lab.png"
         alt="Little Dream Lab"
         class="footer-logo"
       >
@@ -1113,3 +1346,4 @@
 
 </body>
 </html>
+```
