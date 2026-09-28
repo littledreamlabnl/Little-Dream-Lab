@@ -9,6 +9,7 @@
     <meta name="description" content="Little Dream Lab – Family Café, Indoor Playground and Creative Community Space.">
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -22,11 +23,13 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #fff8f1;
-            color: #4d4038;
+            color: #51443c;
             line-height: 1.6;
         }
 
-        /* HEADER */
+        /* =========================
+           HEADER
+        ========================= */
 
         header {
             background: #fff8f1;
@@ -54,7 +57,7 @@
 
         nav a {
             text-decoration: none;
-            color: #4d4038;
+            color: #51443c;
             font-size: 15px;
             font-weight: 500;
         }
@@ -63,46 +66,71 @@
             color: #b98267;
         }
 
-        /* HERO */
+
+        /* =========================
+           HOME
+        ========================= */
 
         .hero {
-            min-height: 78vh;
+            min-height: calc(100vh - 90px);
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 70px 6%;
             text-align: center;
-            padding: 70px 20px;
         }
 
         .hero-content {
-            max-width: 850px;
+            max-width: 1000px;
+            width: 100%;
         }
 
-        .hero-image {
-            width: 260px;
+        .welcome-video {
+            width: 320px;
             max-width: 80%;
             height: auto;
-            margin-bottom: 35px;
+            display: block;
+            margin: 0 auto 35px;
+
+            border-radius: 28px;
+
+            object-fit: contain;
+
+            background: transparent;
         }
 
         .hero h1 {
             font-family: Georgia, "Times New Roman", serif;
-            font-size: 52px;
+            font-size: 58px;
             font-weight: normal;
             color: #51443c;
+            margin-bottom: 15px;
+        }
+
+        .hero-subtitle {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 24px;
+            color: #8b6d5d;
             margin-bottom: 18px;
         }
 
-        .hero p {
-            max-width: 680px;
+        .hero-description {
+            max-width: 650px;
             margin: 0 auto 30px;
-            font-size: 20px;
+            font-size: 18px;
             color: #6b5b50;
+        }
+
+        .hero-tagline {
+            font-size: 15px;
+            letter-spacing: 1px;
+            color: #9a7b69;
+            margin-bottom: 30px;
         }
 
         .button {
             display: inline-block;
-            padding: 13px 28px;
+            padding: 13px 30px;
             background: #c9987d;
             color: white;
             text-decoration: none;
@@ -115,7 +143,10 @@
             background: #b98267;
         }
 
-        /* SECTIONS */
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
 
         section {
             padding: 90px 8%;
@@ -128,7 +159,7 @@
 
         .section-title {
             font-family: Georgia, "Times New Roman", serif;
-            font-size: 38px;
+            font-size: 40px;
             font-weight: normal;
             text-align: center;
             margin-bottom: 20px;
@@ -143,13 +174,19 @@
             font-size: 17px;
         }
 
-        /* ABOUT */
+
+        /* =========================
+           ABOUT
+        ========================= */
 
         .about {
             background: white;
         }
 
-        /* CARDS */
+
+        /* =========================
+           CARDS
+        ========================= */
 
         .cards {
             display: grid;
@@ -160,7 +197,7 @@
         .card {
             background: #fff8f1;
             padding: 35px 25px;
-            border-radius: 18px;
+            border-radius: 20px;
             text-align: center;
         }
 
@@ -177,19 +214,28 @@
             font-size: 15px;
         }
 
-        /* PLAY */
+
+        /* =========================
+           PLAY
+        ========================= */
 
         .play {
             background: white;
         }
 
-        /* PARTIES */
+
+        /* =========================
+           PARTIES
+        ========================= */
 
         .parties {
             background: #f6ebe2;
         }
 
-        /* CONTACT */
+
+        /* =========================
+           CONTACT
+        ========================= */
 
         .contact {
             text-align: center;
@@ -210,7 +256,10 @@
             font-weight: bold;
         }
 
-        /* FOOTER */
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             background: #51443c;
@@ -232,7 +281,10 @@
             opacity: 0.9;
         }
 
-        /* TABLET */
+
+        /* =========================
+           TABLET
+        ========================= */
 
         @media (max-width: 900px) {
 
@@ -249,7 +301,7 @@
             }
 
             .hero h1 {
-                font-size: 44px;
+                font-size: 48px;
             }
 
             .cards {
@@ -259,7 +311,10 @@
             }
         }
 
-        /* MOBILE */
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 650px) {
 
@@ -285,21 +340,31 @@
             }
 
             .hero {
-                min-height: 70vh;
+                min-height: 75vh;
                 padding: 55px 20px;
             }
 
-            .hero-image {
-                width: 200px;
+            .welcome-video {
+                width: 240px;
+                max-width: 75%;
                 margin-bottom: 25px;
+                border-radius: 22px;
             }
 
             .hero h1 {
-                font-size: 38px;
+                font-size: 40px;
             }
 
-            .hero p {
-                font-size: 17px;
+            .hero-subtitle {
+                font-size: 20px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .hero-tagline {
+                font-size: 13px;
             }
 
             section {
@@ -322,36 +387,54 @@
                 padding: 40px 20px;
             }
         }
+
     </style>
 </head>
 
+
 <body>
 
-    <!-- HEADER -->
+
+    <!-- =========================
+         HEADER
+    ========================= -->
 
     <header>
 
         <a href="#home">
+
             <img
                 src="./logo-little-dream-lab.png"
                 alt="Little Dream Lab"
                 class="logo"
             >
+
         </a>
 
+
         <nav>
+
             <a href="#home">Home</a>
+
             <a href="#about">About Us</a>
+
             <a href="#cafe">Café</a>
+
             <a href="#play">Play</a>
+
             <a href="#parties">Parties</a>
+
             <a href="#contact">Contact</a>
+
         </nav>
 
     </header>
 
 
-    <!-- HOME -->
+
+    <!-- =========================
+         HOME
+    ========================= -->
 
     <main>
 
@@ -359,22 +442,58 @@
 
             <div class="hero-content">
 
-                <img
-                    src="./logo-little-dream-lab.png"
-                    alt="Little Dream Lab"
-                    class="hero-image"
+
+                <!-- POMPOM VIDEO -->
+
+                <video
+                    class="welcome-video"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="auto"
                 >
 
-                <h1>Little Dream Lab</h1>
+                    <source
+                        src="./pompom-welcome-small.mov"
+                        type="video/quicktime"
+                    >
 
-                <p>
+                    Your browser does not support the video.
+
+                </video>
+
+
+                <h1>
+                    Welcome to Little Dream Lab
+                </h1>
+
+
+                <p class="hero-subtitle">
+                    A little place for big imaginations.
+                </p>
+
+
+                <p class="hero-description">
+
                     A warm and inspiring space where children can play,
                     create and explore, while families enjoy beautiful
                     moments together.
+
                 </p>
 
+
+                <p class="hero-tagline">
+
+                    FAMILY CAFÉ · PLAY · CREATE · CONNECT
+
+                </p>
+
+
                 <a href="#about" class="button">
-                    Discover Little Dream Lab
+
+                    Discover our world
+
                 </a>
 
             </div>
@@ -382,7 +501,10 @@
         </section>
 
 
-        <!-- ABOUT -->
+
+        <!-- =========================
+             ABOUT
+        ========================= -->
 
         <section id="about" class="about">
 
@@ -392,41 +514,67 @@
                     About Us
                 </h2>
 
+
                 <p class="section-intro">
+
                     Little Dream Lab is a family café, indoor playground
                     and creative community space designed to bring
                     families together in a warm, beautiful and inspiring
                     environment.
+
                 </p>
+
 
                 <div class="cards">
 
+
                     <div class="card">
-                        <h3>Play</h3>
+
+                        <h3>
+                            Play
+                        </h3>
 
                         <p>
+
                             A safe and inspiring environment where children
                             can move, discover and enjoy imaginative play.
+
                         </p>
+
                     </div>
 
+
                     <div class="card">
-                        <h3>Create</h3>
+
+                        <h3>
+                            Create
+                        </h3>
 
                         <p>
+
                             Creative activities that encourage curiosity,
                             imagination and self-expression.
+
                         </p>
+
                     </div>
+
 
                     <div class="card">
-                        <h3>Connect</h3>
+
+                        <h3>
+                            Connect
+                        </h3>
 
                         <p>
+
                             A welcoming place where families and the local
                             community can meet, relax and connect.
+
                         </p>
+
                     </div>
+
 
                 </div>
 
@@ -435,7 +583,10 @@
         </section>
 
 
-        <!-- CAFE -->
+
+        <!-- =========================
+             CAFE
+        ========================= -->
 
         <section id="cafe">
 
@@ -445,39 +596,65 @@
                     The Café
                 </h2>
 
+
                 <p class="section-intro">
+
                     A cosy café for parents and families, offering good
                     coffee, delicious treats and a comfortable place to
                     slow down while children enjoy their time.
+
                 </p>
+
 
                 <div class="cards">
 
+
                     <div class="card">
-                        <h3>Good Coffee</h3>
+
+                        <h3>
+                            Good Coffee
+                        </h3>
 
                         <p>
+
                             Carefully prepared coffee for parents and
                             coffee lovers.
+
                         </p>
+
                     </div>
 
+
                     <div class="card">
-                        <h3>Family Friendly</h3>
+
+                        <h3>
+                            Family Friendly
+                        </h3>
 
                         <p>
+
                             A relaxed environment designed with families
                             and little ones in mind.
+
                         </p>
+
                     </div>
+
 
                     <div class="card">
-                        <h3>Little Treats</h3>
+
+                        <h3>
+                            Little Treats
+                        </h3>
 
                         <p>
+
                             Simple and delicious treats to enjoy together.
+
                         </p>
+
                     </div>
+
 
                 </div>
 
@@ -486,7 +663,10 @@
         </section>
 
 
-        <!-- PLAY -->
+
+        <!-- =========================
+             PLAY
+        ========================= -->
 
         <section id="play" class="play">
 
@@ -496,40 +676,66 @@
                     Play & Explore
                 </h2>
 
+
                 <p class="section-intro">
+
                     Our indoor play environment is designed for different
                     stages of early childhood, encouraging movement,
                     exploration and imaginative play.
+
                 </p>
+
 
                 <div class="cards">
 
+
                     <div class="card">
-                        <h3>Baby Area</h3>
+
+                        <h3>
+                            Baby Area
+                        </h3>
 
                         <p>
+
                             A gentle and comfortable play space for our
                             youngest visitors.
+
                         </p>
+
                     </div>
 
+
                     <div class="card">
-                        <h3>Little Explorers</h3>
+
+                        <h3>
+                            Little Explorers
+                        </h3>
 
                         <p>
+
                             A playful environment where young children can
                             climb, explore and discover.
+
                         </p>
+
                     </div>
+
 
                     <div class="card">
-                        <h3>Creative Corner</h3>
+
+                        <h3>
+                            Creative Corner
+                        </h3>
 
                         <p>
+
                             A space for drawing, painting, making and
                             discovering new ideas.
+
                         </p>
+
                     </div>
+
 
                 </div>
 
@@ -538,7 +744,10 @@
         </section>
 
 
-        <!-- PARTIES -->
+
+        <!-- =========================
+             PARTIES
+        ========================= -->
 
         <section id="parties" class="parties">
 
@@ -548,40 +757,66 @@
                     Little Parties
                 </h2>
 
+
                 <p class="section-intro">
+
                     Celebrate special moments in a warm and playful
                     environment designed especially for children and
                     their families.
+
                 </p>
+
 
                 <div class="cards">
 
+
                     <div class="card">
-                        <h3>Birthday Parties</h3>
+
+                        <h3>
+                            Birthday Parties
+                        </h3>
 
                         <p>
+
                             Beautiful and memorable birthday celebrations
                             for little ones.
+
                         </p>
+
                     </div>
 
+
                     <div class="card">
-                        <h3>Creative Parties</h3>
+
+                        <h3>
+                            Creative Parties
+                        </h3>
 
                         <p>
+
                             Fun creative experiences filled with colours,
                             imagination and making.
+
                         </p>
+
                     </div>
+
 
                     <div class="card">
-                        <h3>Special Moments</h3>
+
+                        <h3>
+                            Special Moments
+                        </h3>
 
                         <p>
+
                             A flexible space for family celebrations and
                             community gatherings.
+
                         </p>
+
                     </div>
+
 
                 </div>
 
@@ -590,7 +825,10 @@
         </section>
 
 
-        <!-- CONTACT -->
+
+        <!-- =========================
+             CONTACT
+        ========================= -->
 
         <section id="contact" class="contact">
 
@@ -600,19 +838,26 @@
                     Contact
                 </h2>
 
+
                 <p class="section-intro">
+
                     We would love to hear from you and share the Little
                     Dream Lab journey with you.
+
                 </p>
 
+
                 <p>
+
                     Email:
+
                     <a
                         href="mailto:hello@littledreamlab.nl"
                         class="email"
                     >
                         hello@littledreamlab.nl
                     </a>
+
                 </p>
 
             </div>
@@ -622,9 +867,13 @@
     </main>
 
 
-    <!-- FOOTER -->
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer>
+
 
         <img
             src="./logo-little-dream-lab.png"
@@ -632,15 +881,19 @@
             class="footer-logo"
         >
 
+
         <p>
             © 2026 Little Dream Lab. All rights reserved.
         </p>
+
 
         <p>
             Family Café · Play · Create · Connect
         </p>
 
+
     </footer>
+
 
 </body>
 </html>
