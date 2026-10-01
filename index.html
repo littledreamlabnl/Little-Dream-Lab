@@ -1,46 +1,1508 @@
-<!-- =========================
-     CONTACT
-========================= -->
+<!DOCTYPE html>
+<html lang="en">
 
-<section class="contact" id="contact">
+<head>
 
-    <div class="contact-container">
+    <meta charset="UTF-8">
 
-        <p class="about-label">
-            Come say hello
-        </p>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-        <h2>
-            We'd love to
-            <br>
-            meet you.
-        </h2>
+    <title>Little Dream Lab</title>
 
-        <p>
-            Little Dream Lab is being created with love
-            for little dreamers, their families and our
-            future community.
-        </p>
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
 
-        <a
-            href="mailto:info@littledreamlab.nl"
-            class="contact-email"
-        >
-            info@littledreamlab.nl
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            background: #fff8f1;
+            color: #4b4038;
+            font-family: "Playfair Display", serif;
+            line-height: 1.6;
+        }
+
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 18px 5%;
+
+            background: rgba(255, 248, 241, 0.96);
+
+            backdrop-filter: blur(8px);
+
+            border-bottom:
+                1px solid
+                rgba(75, 64, 56, 0.08);
+        }
+
+
+        .logo {
+
+            width: 145px;
+            height: auto;
+        }
+
+
+        nav {
+
+            display: flex;
+            align-items: center;
+
+            gap: 30px;
+        }
+
+
+        nav a {
+
+            font-size: 14px;
+
+            letter-spacing: 1px;
+
+            transition:
+                opacity 0.3s ease;
+        }
+
+
+        nav a:hover {
+            opacity: 0.55;
+        }
+
+
+        /* =========================
+           HOME
+        ========================= */
+
+        .hero {
+
+            min-height:
+                calc(100vh - 82px);
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding:
+                60px 25px 90px;
+
+            overflow: hidden;
+        }
+
+
+        .hero-video-wrapper {
+
+            width:
+                min(620px, 90vw);
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            margin-bottom: 35px;
+        }
+
+
+        .welcome-video {
+
+            width: 100%;
+
+            max-width: 620px;
+
+            height: auto;
+
+            display: block;
+        }
+
+
+        /* =========================
+           ORIGINAL LOGO
+        ========================= */
+
+        .hero-logo {
+
+            width:
+                min(430px, 75vw);
+
+            height: auto;
+
+            margin:
+                0 auto 25px;
+
+            display: block;
+        }
+
+
+        .hero-subtitle {
+
+            font-size:
+                clamp(17px, 2vw, 21px);
+
+            line-height: 1.7;
+
+            letter-spacing: 0.2px;
+
+            max-width: 650px;
+
+            margin: 0 auto;
+
+            color: #655950;
+
+            font-style: normal;
+        }
+
+
+        .hero-small {
+
+            margin-top: 28px;
+
+            font-size: 11px;
+
+            letter-spacing: 2.5px;
+
+            text-transform: uppercase;
+
+            color: #7b806d;
+        }
+
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        section {
+
+            padding:
+                110px 6%;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+
+            background: #f8eee5;
+
+            overflow: hidden;
+        }
+
+
+        .about-container {
+
+            max-width: 1050px;
+
+            margin: 0 auto;
+        }
+
+
+        .about-intro {
+
+            text-align: center;
+
+            margin-bottom: 70px;
+        }
+
+
+        .about-label {
+
+            font-size: 11px;
+
+            letter-spacing: 3px;
+
+            font-weight: 600;
+
+            color: #7b806d;
+
+            margin-bottom: 18px;
+
+            text-transform: uppercase;
+        }
+
+
+        .about-intro h2 {
+
+            font-size:
+                clamp(42px, 6vw, 70px);
+
+            line-height: 1.08;
+
+            font-weight: 500;
+
+            color: #4b4038;
+        }
+
+
+        .about-story {
+
+            max-width: 720px;
+
+            margin: 0 auto;
+        }
+
+
+        .about-story p {
+
+            font-size: 18px;
+
+            line-height: 1.9;
+
+            margin-bottom: 25px;
+        }
+
+
+        .about-story p:first-child {
+
+            font-size: 27px;
+
+            line-height: 1.5;
+
+            text-align: center;
+
+            margin-bottom: 45px;
+
+            font-style: normal;
+
+            color: #59634e;
+        }
+
+
+        .about-second {
+
+            max-width: 720px;
+
+            margin:
+                100px auto 0;
+        }
+
+
+        .about-second h3 {
+
+            font-size:
+                clamp(34px, 5vw, 52px);
+
+            line-height: 1.15;
+
+            font-weight: 500;
+
+            margin-bottom: 30px;
+        }
+
+
+        .about-second p:not(.about-label) {
+
+            font-size: 18px;
+
+            line-height: 1.9;
+
+            margin-bottom: 25px;
+        }
+
+
+        .about-ending {
+
+            max-width: 780px;
+
+            margin:
+                120px auto 0;
+
+            text-align: center;
+        }
+
+
+        .about-small {
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            margin-bottom: 12px;
+        }
+
+
+        .about-final {
+
+            margin-top: 65px;
+
+            padding-bottom: 20px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 8px;
+        }
+
+
+        .about-final span {
+
+            display: block;
+
+            font-size:
+                clamp(28px, 4vw, 45px);
+
+            line-height: 1.2;
+
+            color: #59634e;
+        }
+
+
+        .about-final span:last-child {
+
+            font-size:
+                clamp(32px, 5vw, 52px);
+
+            color: #4b4038;
+
+            margin-top: 5px;
+        }
+
+
+        /* =========================
+           CAFE
+        ========================= */
+
+        .cafe {
+
+            background: #fff8f1;
+        }
+
+
+        .cafe-intro {
+
+            max-width: 700px;
+
+            margin:
+                0 auto 55px;
+
+            text-align: center;
+        }
+
+
+        .cafe-intro p {
+
+            font-size: 18px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           CARDS
+        ========================= */
+
+        .cards {
+
+            max-width: 1050px;
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .card {
+
+            padding:
+                35px 28px;
+
+            background: #f8eee5;
+
+            text-align: center;
+
+            border-radius: 3px;
+        }
+
+
+        .card h3 {
+
+            font-size: 28px;
+
+            font-weight: 500;
+
+            margin-bottom: 15px;
+        }
+
+
+        .card p {
+
+            font-size: 16px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           PLAY
+        ========================= */
+
+        .play {
+
+            background: #edf0e7;
+        }
+
+
+        .play-intro {
+
+            max-width: 720px;
+
+            margin:
+                0 auto 55px;
+
+            text-align: center;
+        }
+
+
+        .play-intro p {
+
+            font-size: 18px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           PARTIES
+        ========================= */
+
+        .parties {
+
+            background: #fff8f1;
+
+            text-align: center;
+        }
+
+
+        .parties-container {
+
+            max-width: 760px;
+
+            margin: 0 auto;
+        }
+
+
+        .parties p {
+
+            font-size: 18px;
+
+            line-height: 1.9;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .button {
+
+            display: inline-block;
+
+            margin-top: 20px;
+
+            padding:
+                13px 28px;
+
+            border:
+                1px solid #59634e;
+
+            color: #4b4038;
+
+            font-size: 14px;
+
+            letter-spacing: 1px;
+
+            transition:
+                all 0.3s ease;
+        }
+
+
+        .button:hover {
+
+            background: #59634e;
+
+            color: #fff8f1;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+
+            background: #f8eee5;
+
+            text-align: center;
+        }
+
+
+        .contact-container {
+
+            max-width: 700px;
+
+            margin: 0 auto;
+        }
+
+
+        .contact p {
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            margin-bottom: 25px;
+        }
+
+
+        .contact-email {
+
+            display: inline-block;
+
+            margin-top: 15px;
+
+            font-size: 20px;
+
+            color: #59634e;
+
+            border-bottom:
+                1px solid #59634e;
+
+            padding-bottom: 4px;
+        }
+
+
+        .contact-address {
+
+            margin-top: 30px;
+
+            font-size: 17px;
+
+            line-height: 1.7;
+        }
+
+
+        .contact-address a {
+
+            color: #59634e;
+
+            transition:
+                opacity 0.3s ease;
+        }
+
+
+        .contact-address a:hover {
+            opacity: 0.6;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            background: #4b4038;
+
+            color: #fff8f1;
+
+            text-align: center;
+
+            padding: 28px 20px;
+
+            font-size: 12px;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 750px) {
+
+            header {
+
+                padding:
+                    15px 20px;
+
+                flex-direction: column;
+
+                gap: 12px;
+            }
+
+
+            .logo {
+                width: 130px;
+            }
+
+
+            nav {
+
+                gap: 15px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+
+            nav a {
+                font-size: 12px;
+            }
+
+
+            .hero {
+
+                min-height: auto;
+
+                padding:
+                    55px 20px 75px;
+            }
+
+
+            .hero-video-wrapper {
+
+                width: 92vw;
+
+                margin-bottom: 30px;
+            }
+
+
+            .hero-logo {
+
+                width:
+                    min(340px, 78vw);
+
+                margin-bottom: 22px;
+            }
+
+
+            .hero-subtitle {
+
+                font-size: 17px;
+
+                line-height: 1.7;
+
+                max-width: 90%;
+            }
+
+
+            .hero-small {
+
+                font-size: 9px;
+
+                letter-spacing: 1.8px;
+
+                line-height: 1.7;
+            }
+
+
+            section {
+
+                padding:
+                    80px 22px;
+            }
+
+
+            /* ABOUT */
+
+            .about-intro {
+
+                margin-bottom: 50px;
+            }
+
+
+            .about-intro h2 {
+
+                font-size: 40px;
+            }
+
+
+            .about-story p {
+
+                font-size: 17px;
+
+                line-height: 1.8;
+            }
+
+
+            .about-story p:first-child {
+
+                font-size: 23px;
+
+                line-height: 1.5;
+            }
+
+
+            .about-second {
+
+                margin-top: 75px;
+            }
+
+
+            .about-second h3 {
+
+                font-size: 36px;
+            }
+
+
+            .about-second p:not(.about-label) {
+
+                font-size: 17px;
+
+                line-height: 1.8;
+            }
+
+
+            .about-ending {
+
+                margin-top: 85px;
+            }
+
+
+            .about-small {
+
+                font-size: 16px;
+
+                line-height: 1.8;
+            }
+
+
+            .about-final {
+
+                margin-top: 50px;
+            }
+
+
+            .about-final span {
+
+                font-size: 29px;
+            }
+
+
+            .about-final span:last-child {
+
+                font-size: 33px;
+            }
+
+
+            /* CARDS */
+
+            .cards {
+
+                grid-template-columns: 1fr;
+
+                gap: 18px;
+            }
+
+
+            .card {
+
+                padding:
+                    30px 24px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <a href="#home">
+
+            <img
+                src="./logo-little-dream-lab.png"
+                alt="Little Dream Lab"
+                class="logo"
+            >
+
         </a>
 
-        <p class="contact-address">
-            <a
-                href="https://www.google.com/maps/search/?api=1&query=Charlotte+van+Pallandthof+2+Diemen"
-                target="_blank"
-                rel="noopener"
-            >
-                Charlotte van Pallandthof 2
-                <br>
-                Diemen, Netherlands
+
+        <nav>
+
+            <a href="#about">
+                About
             </a>
-        </p>
 
-    </div>
+            <a href="#cafe">
+                Café
+            </a>
 
-</section>
+            <a href="#play">
+                Play
+            </a>
+
+            <a href="#parties">
+                Parties
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         HOME
+    ========================== -->
+
+    <main>
+
+        <section
+            class="hero"
+            id="home"
+        >
+
+
+            <div class="hero-video-wrapper">
+
+                <video
+                    class="welcome-video"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="auto"
+                >
+
+                    <source
+                        src="./pompom-welcome-small.mp4"
+                        type="video/mp4"
+                    >
+
+                    Your browser does not support the video.
+
+                </video>
+
+            </div>
+
+
+            <!--
+                ORIGINAL LITTLE DREAM LAB LOGO
+
+                This is your actual logo file.
+                We are NOT recreating the leaf.
+            -->
+
+            <img
+                src="./logo-little-dream-lab.png"
+                alt="Little Dream Lab"
+                class="hero-logo"
+            >
+
+
+            <p class="hero-subtitle">
+
+                A little world for big imaginations.
+
+                <br>
+
+                Play · Create · Connect
+
+            </p>
+
+
+            <p class="hero-small">
+
+                Family Café · Indoor Play · Creative Community
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section
+            class="about"
+            id="about"
+        >
+
+            <div class="about-container">
+
+
+                <div class="about-intro">
+
+                    <p class="about-label">
+                        About Little Dream Lab
+                    </p>
+
+
+                    <h2>
+
+                        It all started with
+
+                        <br>
+
+                        a little dream.
+
+                    </h2>
+
+                </div>
+
+
+
+                <div class="about-story">
+
+                    <p>
+                        Little Dream Lab was inspired by my son.
+                    </p>
+
+
+                    <p>
+                        Watching him grow, play, imagine and discover
+                        the world reminded me how magical childhood can
+                        be — and how important it is to have spaces where
+                        children can simply be children.
+                    </p>
+
+
+                    <p>
+                        I dreamed of creating a place where little ones
+                        could explore their imagination, make friends,
+                        create, play and feel free to discover at their
+                        own pace.
+                    </p>
+
+
+                    <p>
+                        But I also wanted something for the grown-ups.
+                    </p>
+
+
+                    <p>
+                        A place where parents could feel welcome, enjoy
+                        a good coffee, connect with other families and
+                        share those little everyday moments with their
+                        children.
+                    </p>
+
+                </div>
+
+
+
+                <div class="about-second">
+
+                    <p class="about-label">
+                        From one little dream
+                    </p>
+
+
+                    <h3>
+                        To a world of possibilities.
+                    </h3>
+
+
+                    <p>
+
+                        That dream became
+                        <strong>Little Dream Lab</strong> —
+
+                        a warm family space bringing together
+
+                        <strong>
+                            play, creativity, coffee and community.
+                        </strong>
+
+                    </p>
+
+
+                    <p>
+
+                        Every detail is inspired by the things that make
+                        childhood special: stories, imagination, curiosity,
+                        messy little hands, new friendships and those tiny
+                        moments that become beautiful memories.
+
+                    </p>
+
+
+                    <p>
+
+                        And somewhere in the middle of it all, you'll find
+                        PomPom — our little companion and a reminder that
+                        every adventure starts with a little imagination.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="about-ending">
+
+                    <p class="about-label">
+
+                        Made for little dreamers · Created with love
+
+                    </p>
+
+
+                    <p class="about-small">
+
+                        Little Dream Lab is more than a place to play.
+
+                    </p>
+
+
+                    <p class="about-small">
+
+                        It is a place to pause, connect, imagine and
+                        grow together.
+
+                    </p>
+
+
+                    <p class="about-small">
+
+                        Because sometimes, the biggest dreams begin with
+                        something very small.
+
+                    </p>
+
+
+                    <div class="about-final">
+
+                        <span>
+                            A child.
+                        </span>
+
+
+                        <span>
+                            A little idea.
+                        </span>
+
+
+                        <span>
+                            A tiny hand with big dreams.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CAFE
+        ========================== -->
+
+        <section
+            class="cafe"
+            id="cafe"
+        >
+
+            <div class="cafe-intro">
+
+                <p class="about-label">
+                    Our Café
+                </p>
+
+
+                <h2>
+
+                    A little pause
+
+                    <br>
+
+                    for grown-ups.
+
+                </h2>
+
+
+                <p>
+
+                    While little ones explore, parents can slow down,
+                    enjoy a good coffee and share beautiful moments
+                    with family and friends.
+
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <div class="card">
+
+                    <h3>
+                        Coffee
+                    </h3>
+
+                    <p>
+
+                        Carefully selected coffee and warm drinks
+                        for those little moments of pause.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <h3>
+                        Treats
+                    </h3>
+
+                    <p>
+
+                        Simple, delicious treats made for sharing
+                        with the people you love.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <h3>
+                        Relax
+                    </h3>
+
+                    <p>
+
+                        A welcoming space where parents can sit,
+                        connect and simply enjoy being together.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PLAY
+        ========================== -->
+
+        <section
+            class="play"
+            id="play"
+        >
+
+            <div class="play-intro">
+
+                <p class="about-label">
+                    Play & Explore
+                </p>
+
+
+                <h2>
+
+                    Where imagination
+
+                    <br>
+
+                    comes to life.
+
+                </h2>
+
+
+                <p>
+
+                    A playful world where little dreamers can explore,
+                    create, move, imagine and make new friends.
+
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <div class="card">
+
+                    <h3>
+                        Little Ones
+                    </h3>
+
+                    <p>
+
+                        A gentle space designed for our youngest
+                        little explorers.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <h3>
+                        Big Adventures
+                    </h3>
+
+                    <p>
+
+                        Room to move, discover, climb, play and
+                        create wonderful childhood memories.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="card">
+
+                    <h3>
+                        Create
+                    </h3>
+
+                    <p>
+
+                        Creative activities where little hands
+                        can turn big ideas into something real.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PARTIES
+        ========================== -->
+
+        <section
+            class="parties"
+            id="parties"
+        >
+
+            <div class="parties-container">
+
+                <p class="about-label">
+                    Little Parties
+                </p>
+
+
+                <h2>
+
+                    Tiny celebrations.
+
+                    <br>
+
+                    Big memories.
+
+                </h2>
+
+
+                <p>
+
+                    A special little corner for birthdays and
+                    celebrations filled with imagination, play
+                    and beautiful moments.
+
+                </p>
+
+
+                <a
+                    href="#contact"
+                    class="button"
+                >
+                    Discover Little Parties
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section
+            class="contact"
+            id="contact"
+        >
+
+            <div class="contact-container">
+
+                <p class="about-label">
+                    Come say hello
+                </p>
+
+
+                <h2>
+
+                    We'd love to
+
+                    <br>
+
+                    meet you.
+
+                </h2>
+
+
+                <p>
+
+                    Little Dream Lab is being created with love
+                    for little dreamers, their families and our
+                    future community.
+
+                </p>
+
+
+                <a
+                    href="mailto:info@littledreamlab.nl"
+                    class="contact-email"
+                >
+
+                    info@littledreamlab.nl
+
+                </a>
+
+
+                <p class="contact-address">
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=Charlotte+van+Pallandthof+2+Diemen"
+                        target="_blank"
+                        rel="noopener"
+                    >
+
+                        Charlotte van Pallandthof 2
+
+                        <br>
+
+                        Diemen, Netherlands
+
+                    </a>
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        © 2026 Little Dream Lab ·
+        Family Café ·
+        Play ·
+        Create ·
+        Connect
+
+    </footer>
+
+
+</body>
+
+</html>
