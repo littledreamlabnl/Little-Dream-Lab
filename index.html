@@ -1,585 +1,1282 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#fff8f1">
-  <meta name="description" content="Little Dream Lab — a warm family café, indoor playground and creative community space in Diemen.">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="theme-color"
+    content="#fff8f1"
+  >
+
+  <meta
+    name="description"
+    content="Little Dream Lab — a warm family café, indoor playground and creative community space in Diemen."
+  >
 
   <title>Little Dream Lab | Play, Create, Connect</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
 
   <style>
+
     :root {
+
       --cream: #fff8f1;
+
       --blush: #f8eee5;
+
       --sage: #edf0e7;
+
       --green: #59634e;
+
       --green-light: #7b806d;
+
       --brown: #4b4038;
+
       --muted: #655950;
+
       --line: rgba(75, 64, 56, 0.12);
+
     }
+
 
     * {
+
       margin: 0;
+
       padding: 0;
+
       box-sizing: border-box;
+
     }
+
 
     html {
+
       scroll-behavior: smooth;
+
       scroll-padding-top: 100px;
+
     }
+
 
     body {
+
       background: var(--cream);
+
       color: var(--brown);
-      font-family: "Playfair Display", Georgia, serif;
+
+      font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
       line-height: 1.7;
+
     }
+
 
     img {
+
       display: block;
+
       max-width: 100%;
+
     }
+
 
     a {
+
       color: inherit;
+
       text-decoration: none;
+
     }
 
-    /* HEADER */
+
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
+
       position: sticky;
+
       top: 0;
+
       z-index: 100;
+
       width: 100%;
+
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
+
       gap: 25px;
+
       padding: 15px 5%;
-      background: rgba(255, 248, 241, 0.96);
-      border-bottom: 1px solid var(--line);
+
+      background:
+        rgba(255, 248, 241, 0.96);
+
+      border-bottom:
+        1px solid var(--line);
+
       backdrop-filter: blur(10px);
+
     }
+
 
     .header-logo {
+
       width: 135px;
+
       height: auto;
+
       flex-shrink: 0;
+
     }
+
 
     nav {
+
       display: flex;
+
       align-items: center;
+
       justify-content: flex-end;
+
       flex-wrap: wrap;
+
       gap: 25px;
+
     }
+
 
     nav a {
+
       font-size: 13px;
+
       letter-spacing: 0.5px;
-      transition: color 0.25s ease;
+
+      transition:
+        color 0.25s ease;
+
     }
+
 
     nav a:hover {
+
       color: var(--green-light);
+
     }
 
-    /* HOME */
+
+    /* =========================
+       HOME
+    ========================= */
 
     .hero {
-      min-height: calc(100svh - 75px);
+
+      min-height:
+        calc(100svh - 75px);
+
       display: flex;
+
       flex-direction: column;
+
       align-items: center;
+
       justify-content: center;
+
       text-align: center;
-      padding: 45px 24px 75px;
+
+      padding:
+        45px 24px 75px;
+
       overflow: hidden;
+
     }
+
 
     .hero-video-wrapper {
-      width: min(560px, 88vw);
-      margin: 0 auto 15px;
+
+      width:
+        min(560px, 88vw);
+
+      margin:
+        0 auto 15px;
+
     }
+
 
     .welcome-video {
+
       display: block;
+
       width: 100%;
+
       height: auto;
+
     }
 
-    /* Your supplied logo artwork: no recreated typography */
+
+    /* Original Little Dream Lab wordmark */
 
     .hero-logo {
-      width: min(760px, 94vw);
+
+      width:
+        min(760px, 94vw);
+
       height: auto;
-      margin: 0 auto 22px;
+
+      margin:
+        0 auto 22px;
+
     }
+
 
     .hero-subtitle {
+
       max-width: 620px;
-      font-size: clamp(17px, 2vw, 21px);
+
+      font-size:
+        clamp(17px, 2vw, 21px);
+
       font-style: normal;
+
       font-weight: 400;
+
       line-height: 1.8;
+
       letter-spacing: 0.15px;
+
       color: var(--muted);
+
     }
+
 
     .hero-small {
+
       margin-top: 25px;
+
       color: var(--green-light);
-      font-size: 11px;
+
+      font-family: Arial, sans-serif;
+
+      font-size: 10px;
+
       letter-spacing: 2px;
+
       text-transform: uppercase;
+
     }
+
 
     .scroll-note {
+
       margin-top: 48px;
+
       color: var(--green-light);
+
+      font-family: Arial, sans-serif;
+
       font-size: 10px;
+
       letter-spacing: 2.5px;
+
       text-transform: uppercase;
+
     }
 
-    /* SHARED SECTIONS */
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
 
     section {
-      padding: 100px 6%;
+
+      padding:
+        100px 6%;
+
     }
+
 
     .section-container {
+
       max-width: 1050px;
+
       margin: 0 auto;
+
     }
+
 
     .eyebrow {
+
       margin-bottom: 18px;
+
       color: var(--green-light);
+
       font-family: Arial, sans-serif;
+
       font-size: 10px;
+
       font-weight: 600;
+
       letter-spacing: 3px;
+
       line-height: 1.8;
+
       text-transform: uppercase;
+
     }
+
 
     .section-heading {
+
       margin-bottom: 28px;
-      font-size: clamp(38px, 5vw, 60px);
+
+      font-size:
+        clamp(38px, 5vw, 60px);
+
       font-weight: 400;
+
       line-height: 1.15;
+
     }
+
 
     .section-intro {
+
       max-width: 720px;
-      margin: 0 auto 55px;
+
+      margin:
+        0 auto 55px;
+
       text-align: center;
+
     }
+
 
     .section-intro > p:last-child {
+
       font-size: 17px;
+
       line-height: 1.9;
+
     }
 
-    /* ABOUT */
+
+    /* =========================
+       ABOUT
+    ========================= */
 
     .about {
+
       background: var(--blush);
+
     }
+
 
     .about-container {
+
       max-width: 1050px;
+
       margin: 0 auto;
+
     }
+
 
     .about-intro {
+
       margin-bottom: 70px;
+
       text-align: center;
+
     }
+
 
     .about-intro h2 {
-      font-size: clamp(42px, 6vw, 70px);
+
+      font-size:
+        clamp(42px, 6vw, 70px);
+
       font-weight: 400;
+
       line-height: 1.12;
+
     }
 
+
     .about-story {
+
       max-width: 720px;
+
       margin: 0 auto;
+
     }
+
 
     .about-story p,
     .about-second p:not(.eyebrow) {
+
       margin-bottom: 24px;
+
       font-size: 17px;
+
       line-height: 1.95;
+
     }
+
 
     .about-story .story-opening {
+
       margin-bottom: 38px;
+
       color: var(--green);
+
       font-size: 26px;
+
       line-height: 1.55;
+
       text-align: center;
+
     }
+
 
     .about-second {
+
       max-width: 720px;
-      margin: 95px auto 0;
+
+      margin:
+        95px auto 0;
+
     }
+
 
     .about-second h3 {
+
       margin-bottom: 28px;
-      font-size: clamp(34px, 5vw, 50px);
+
+      font-size:
+        clamp(34px, 5vw, 50px);
+
       font-weight: 400;
+
       line-height: 1.2;
+
     }
+
 
     .about-ending {
+
       max-width: 780px;
-      margin: 110px auto 0;
+
+      margin:
+        110px auto 0;
+
       text-align: center;
+
     }
+
 
     .about-ending .closing-line {
+
       margin-bottom: 12px;
+
       font-size: 17px;
+
       line-height: 1.9;
+
     }
+
 
     .about-final {
+
       display: flex;
+
       flex-direction: column;
+
       gap: 8px;
+
       margin-top: 55px;
+
       padding-bottom: 15px;
+
     }
+
 
     .about-final span {
+
       color: var(--green);
-      font-size: clamp(28px, 4vw, 43px);
+
+      font-size:
+        clamp(28px, 4vw, 43px);
+
       line-height: 1.35;
+
     }
+
 
     .about-final span:last-child {
+
       margin-top: 4px;
+
       color: var(--brown);
-      font-size: clamp(30px, 4.5vw, 48px);
+
+      font-size:
+        clamp(30px, 4.5vw, 48px);
+
     }
 
-    /* CARDS */
+
+    /* =========================
+       CARDS
+    ========================= */
 
     .cards {
+
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
       gap: 24px;
+
       max-width: 1050px;
+
       margin: 0 auto;
+
     }
+
 
     .card {
-      padding: 34px 25px;
+
+      padding:
+        34px 25px;
+
       background: var(--blush);
+
       text-align: center;
+
     }
+
 
     .card h3 {
+
       margin-bottom: 13px;
+
       font-size: 27px;
+
       font-weight: 400;
+
     }
+
 
     .card p {
+
       font-size: 15px;
+
       line-height: 1.9;
+
     }
 
-    /* CAFE */
+
+    /* =========================
+       CAFE
+    ========================= */
 
     .cafe {
+
       background: var(--cream);
+
     }
 
-    /* PLAY */
+
+    /* =========================
+       PLAY
+    ========================= */
 
     .play {
+
       background: var(--sage);
+
     }
+
 
     .play .card {
-      background: rgba(255, 248, 241, 0.75);
+
+      background:
+        rgba(255, 248, 241, 0.75);
+
     }
 
-    /* PARTIES */
+
+    /* =========================
+       PARTIES
+    ========================= */
 
     .parties {
+
       background: var(--cream);
+
       text-align: center;
+
     }
+
 
     .parties-container {
+
       max-width: 760px;
+
       margin: 0 auto;
+
     }
+
 
     .parties-description {
-      margin: 0 auto 25px;
+
+      margin:
+        0 auto 25px;
+
       font-size: 17px;
+
       line-height: 1.9;
+
     }
+
 
     .button {
+
       display: inline-block;
+
       margin-top: 15px;
-      padding: 12px 26px;
-      border: 1px solid var(--green);
+
+      padding:
+        12px 26px;
+
+      border:
+        1px solid var(--green);
+
       color: var(--brown);
+
       font-size: 13px;
+
       letter-spacing: 0.7px;
-      transition: background 0.25s ease, color 0.25s ease;
+
+      transition:
+        background 0.25s ease,
+        color 0.25s ease;
+
     }
+
 
     .button:hover {
+
       background: var(--green);
+
       color: var(--cream);
+
     }
 
-    /* CONTACT */
+
+    /* =========================
+       CONTACT
+    ========================= */
 
     .contact {
+
       background: var(--blush);
+
       text-align: center;
+
     }
+
 
     .contact-container {
+
       max-width: 700px;
+
       margin: 0 auto;
+
     }
+
 
     .contact-description {
+
       margin-bottom: 24px;
+
       font-size: 17px;
+
       line-height: 1.9;
+
     }
+
 
     .contact-email {
+
       display: inline-block;
+
       margin-top: 10px;
+
       padding-bottom: 3px;
-      border-bottom: 1px solid var(--green);
+
+      border-bottom:
+        1px solid var(--green);
+
       color: var(--green);
+
       font-size: 19px;
+
     }
+
 
     .contact-address {
+
       margin-top: 30px;
+
       font-size: 16px;
+
       line-height: 1.8;
+
     }
+
 
     .contact-address a {
+
       color: var(--green);
-      transition: opacity 0.25s ease;
+
+      transition:
+        opacity 0.25s ease;
+
     }
+
 
     .contact-address a:hover {
+
       opacity: 0.65;
+
     }
 
-    /* FOOTER */
+
+    /* =========================
+       SOCIAL LINKS
+    ========================= */
+
+    .social-links {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 28px;
+
+      margin-top: 38px;
+
+    }
+
+
+    .social-link {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      color: var(--green);
+
+      font-family: Arial, sans-serif;
+
+      font-size: 12px;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+
+      transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+
+    }
+
+
+    .social-link:hover {
+
+      opacity: 0.6;
+
+      transform:
+        translateY(-2px);
+
+    }
+
+
+    .social-icon {
+
+      width: 18px;
+
+      height: 18px;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border:
+        1px solid var(--green);
+
+      border-radius: 50%;
+
+      font-size: 9px;
+
+      line-height: 1;
+
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
-      padding: 26px 20px;
+
+      padding:
+        28px 20px;
+
       background: var(--brown);
+
       color: var(--cream);
+
       font-family: Arial, sans-serif;
+
       font-size: 10px;
+
       letter-spacing: 1.2px;
+
       line-height: 1.9;
+
       text-align: center;
+
     }
 
-    /* MOBILE */
+
+    .footer-social {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 25px;
+
+      margin-bottom: 14px;
+
+    }
+
+
+    .footer-social a {
+
+      color: var(--cream);
+
+      font-size: 10px;
+
+      letter-spacing: 1.5px;
+
+      text-transform: uppercase;
+
+      transition:
+        opacity 0.25s ease;
+
+    }
+
+
+    .footer-social a:hover {
+
+      opacity: 0.6;
+
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 750px) {
+
       html {
+
         scroll-padding-top: 130px;
+
       }
+
 
       header {
+
         flex-direction: column;
+
         gap: 10px;
-        padding: 13px 15px;
+
+        padding:
+          13px 15px;
+
       }
+
 
       .header-logo {
+
         width: 115px;
+
       }
+
 
       nav {
+
         justify-content: center;
-        gap: 10px 18px;
+
+        gap:
+          10px 18px;
+
       }
+
 
       nav a {
+
         font-size: 12px;
+
       }
+
 
       .hero {
+
         min-height: auto;
-        padding: 40px 16px 65px;
+
+        padding:
+          40px 16px 65px;
+
       }
+
 
       .hero-video-wrapper {
-        width: min(500px, 94vw);
+
+        width:
+          min(500px, 94vw);
+
         margin-bottom: 12px;
+
       }
+
 
       .hero-logo {
+
         width: 100%;
+
         margin-bottom: 16px;
+
       }
+
 
       .hero-subtitle {
+
         font-size: 16px;
+
         line-height: 1.8;
+
       }
+
 
       .hero-small {
+
         max-width: 310px;
+
         margin-top: 20px;
+
         font-size: 9px;
+
         letter-spacing: 1.5px;
+
         line-height: 1.9;
+
       }
+
 
       .scroll-note {
+
         margin-top: 35px;
+
       }
+
 
       section {
-        padding: 75px 22px;
+
+        padding:
+          75px 22px;
+
       }
+
+
+      /* ABOUT */
 
       .about-intro {
+
         margin-bottom: 45px;
+
       }
 
+
       .about-intro h2 {
+
         font-size: 39px;
+
       }
+
 
       .about-story p,
       .about-second p:not(.eyebrow) {
+
         font-size: 16px;
+
         line-height: 1.85;
+
       }
+
 
       .about-story .story-opening {
+
         font-size: 22px;
+
       }
+
 
       .about-second {
+
         margin-top: 70px;
+
       }
+
 
       .about-second h3 {
+
         font-size: 35px;
+
       }
+
 
       .about-ending {
+
         margin-top: 75px;
+
       }
+
 
       .about-ending .closing-line {
+
         font-size: 15px;
+
       }
+
 
       .about-final {
+
         margin-top: 40px;
+
       }
+
 
       .about-final span {
+
         font-size: 27px;
+
       }
+
 
       .about-final span:last-child {
+
         font-size: 30px;
+
       }
+
+
+      /* CARDS */
 
       .cards {
+
         grid-template-columns: 1fr;
+
         gap: 16px;
+
       }
+
 
       .card {
-        padding: 29px 23px;
+
+        padding:
+          29px 23px;
+
       }
+
 
       .section-heading {
+
         font-size: 39px;
+
       }
+
 
       .section-intro {
+
         margin-bottom: 38px;
+
       }
 
-      .contact-email {
-        font-size: 17px;
+
+      /* SOCIAL */
+
+      .social-links {
+
+        gap: 20px;
+
+        flex-wrap: wrap;
+
+        margin-top: 32px;
+
       }
+
+
+      .social-link {
+
+        font-size: 10px;
+
+      }
+
+
+      .footer-social {
+
+        gap: 20px;
+
+      }
+
     }
 
+
     @media (prefers-reduced-motion: reduce) {
+
       html {
+
         scroll-behavior: auto;
+
       }
+
 
       *,
       *::before,
       *::after {
-        transition-duration: 0.01ms !important;
+
+        transition-duration:
+          0.01ms !important;
+
       }
+
     }
+
   </style>
+
 </head>
+
 
 <body>
 
-  <!-- HEADER -->
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
   <header>
-    <a href="#home" aria-label="Little Dream Lab home">
+
+    <a
+      href="#home"
+      aria-label="Little Dream Lab home"
+    >
+
       <img
         src="./logo-little-dream-lab.png"
         alt="Little Dream Lab"
         class="header-logo"
       >
+
     </a>
 
+
     <nav aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#cafe">Café</a>
-      <a href="#play">Play</a>
-      <a href="#parties">Parties</a>
-      <a href="#contact">Contact</a>
+
+      <a href="#about">
+        About
+      </a>
+
+      <a href="#cafe">
+        Café
+      </a>
+
+      <a href="#play">
+        Play
+      </a>
+
+      <a href="#parties">
+        Parties
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
     </nav>
+
   </header>
+
+
 
   <main>
 
-    <!-- HOME -->
-    <section class="hero" id="home">
+
+    <!-- =========================
+         HOME
+    ========================== -->
+
+    <section
+      class="hero"
+      id="home"
+    >
+
       <div class="hero-video-wrapper">
+
         <video
           class="welcome-video"
           autoplay
@@ -589,239 +1286,694 @@
           preload="auto"
           aria-label="PomPom welcomes you to Little Dream Lab"
         >
-          <source src="./pompom-welcome-small.mp4" type="video/mp4">
+
+          <source
+            src="./pompom-welcome-small.mp4"
+            type="video/mp4"
+          >
+
           Your browser does not support this video.
+
         </video>
+
       </div>
 
-      <!-- Original lettering artwork with the leaf over the i -->
+
+      <!--
+        ORIGINAL LITTLE DREAM LAB WORDMARK
+        WITH THE LEAF OVER THE "i"
+      -->
+
       <img
         src="./little-dream-lab-wordmark.png"
         alt="Little Dream Lab — Tiny hands, big dreams"
         class="hero-logo"
       >
 
+
       <p class="hero-subtitle">
-        A little world for big imaginations.<br>
+
+        A little world for big imaginations.
+
+        <br>
+
         Play · Create · Connect
+
       </p>
+
 
       <p class="hero-small">
+
         Family Café · Indoor Play · Creative Community
+
       </p>
 
-      <a class="scroll-note" href="#about">Discover our little world ↓</a>
+
+      <a
+        class="scroll-note"
+        href="#about"
+      >
+
+        Discover our little world ↓
+
+      </a>
+
     </section>
 
-    <!-- ABOUT -->
-    <section class="about" id="about">
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section
+      class="about"
+      id="about"
+    >
+
       <div class="about-container">
 
-        <div class="about-intro">
-          <p class="eyebrow">About Little Dream Lab</p>
-          <h2>It all started with<br>a little dream.</h2>
-        </div>
 
-        <div class="about-story">
-          <p class="story-opening">
-            Little Dream Lab was inspired by my son.
+        <div class="about-intro">
+
+          <p class="eyebrow">
+            About Little Dream Lab
           </p>
 
+
+          <h2>
+
+            It all started with
+
+            <br>
+
+            a little dream.
+
+          </h2>
+
+        </div>
+
+
+
+        <div class="about-story">
+
+          <p class="story-opening">
+
+            Little Dream Lab was inspired by my son.
+
+          </p>
+
+
           <p>
+
             Watching him grow, play, imagine and discover the world
             reminded me how magical childhood can be — and how important
             it is to have spaces where children can simply be children.
+
           </p>
 
+
           <p>
+
             I dreamed of creating a place where little ones could explore
             their imagination, make friends, create, play and feel free
             to discover at their own pace.
+
           </p>
 
-          <p>But I also wanted something for the grown-ups.</p>
 
           <p>
+
+            But I also wanted something for the grown-ups.
+
+          </p>
+
+
+          <p>
+
             A place where parents could feel welcome, enjoy a good coffee,
             connect with other families and share those little everyday
             moments with their children.
+
           </p>
+
         </div>
 
-        <div class="about-second">
-          <p class="eyebrow">From one little dream</p>
-          <h3>To a world of possibilities.</h3>
 
-          <p>
-            That dream became <strong>Little Dream Lab</strong> — a warm
-            family space bringing together
-            <strong>play, creativity, coffee and community.</strong>
+
+        <div class="about-second">
+
+          <p class="eyebrow">
+            From one little dream
           </p>
 
+
+          <h3>
+
+            To a world of possibilities.
+
+          </h3>
+
+
           <p>
+
+            That dream became
+            <strong>Little Dream Lab</strong> —
+
+            a warm family space bringing together
+
+            <strong>
+              play, creativity, coffee and community.
+            </strong>
+
+          </p>
+
+
+          <p>
+
             Every detail is inspired by the things that make childhood
             special: stories, imagination, curiosity, messy little hands,
             new friendships and those tiny moments that become beautiful
             memories.
+
           </p>
 
+
           <p>
+
             And somewhere in the middle of it all, you'll find PomPom —
             our little companion and a reminder that every adventure
             starts with a little imagination.
+
           </p>
+
         </div>
+
+
 
         <div class="about-ending">
-          <p class="eyebrow">Made for little dreamers · Created with love</p>
+
+          <p class="eyebrow">
+
+            Made for little dreamers · Created with love
+
+          </p>
+
 
           <p class="closing-line">
+
             Little Dream Lab is more than a place to play.
+
           </p>
 
+
           <p class="closing-line">
+
             It is a place to pause, connect, imagine and grow together.
+
           </p>
 
+
           <p class="closing-line">
+
             Because sometimes, the biggest dreams begin with something
             very small.
+
           </p>
 
+
           <div class="about-final">
-            <span>A child.</span>
-            <span>A little idea.</span>
-            <span>A tiny hand with big dreams.</span>
+
+            <span>
+              A child.
+            </span>
+
+            <span>
+              A little idea.
+            </span>
+
+            <span>
+              A tiny hand with big dreams.
+            </span>
+
           </div>
+
         </div>
 
       </div>
+
     </section>
 
-    <!-- CAFE -->
-    <section class="cafe" id="cafe">
+
+
+    <!-- =========================
+         CAFE
+    ========================== -->
+
+    <section
+      class="cafe"
+      id="cafe"
+    >
+
       <div class="section-intro">
-        <p class="eyebrow">Our Café</p>
-        <h2 class="section-heading">A little pause<br>for grown-ups.</h2>
-        <p>
-          While little ones explore, parents can slow down, enjoy a good
-          coffee and share beautiful moments with family and friends.
+
+        <p class="eyebrow">
+          Our Café
         </p>
+
+
+        <h2 class="section-heading">
+
+          A little pause
+
+          <br>
+
+          for grown-ups.
+
+        </h2>
+
+
+        <p>
+
+          While little ones explore, parents can slow down,
+          enjoy a good coffee and share beautiful moments
+          with family and friends.
+
+        </p>
+
       </div>
+
+
 
       <div class="cards">
-        <article class="card">
-          <h3>Coffee</h3>
-          <p>
-            Carefully selected coffee and warm drinks for those little
-            moments of pause.
-          </p>
-        </article>
+
 
         <article class="card">
-          <h3>Treats</h3>
+
+          <h3>
+            Coffee
+          </h3>
+
+
           <p>
-            Simple, delicious treats made for sharing with the people
-            you love.
+
+            Carefully selected coffee and warm drinks for those
+            little moments of pause.
+
           </p>
+
         </article>
 
+
+
         <article class="card">
-          <h3>Relax</h3>
+
+          <h3>
+            Treats
+          </h3>
+
+
           <p>
-            A welcoming space where parents can sit, connect and simply
-            enjoy being together.
+
+            Simple, delicious treats made for sharing with
+            the people you love.
+
           </p>
+
         </article>
+
+
+
+        <article class="card">
+
+          <h3>
+            Relax
+          </h3>
+
+
+          <p>
+
+            A welcoming space where parents can sit,
+            connect and simply enjoy being together.
+
+          </p>
+
+        </article>
+
       </div>
+
     </section>
 
-    <!-- PLAY -->
-    <section class="play" id="play">
+
+
+    <!-- =========================
+         PLAY
+    ========================== -->
+
+    <section
+      class="play"
+      id="play"
+    >
+
       <div class="section-intro">
-        <p class="eyebrow">Play & Explore</p>
-        <h2 class="section-heading">Where imagination<br>comes to life.</h2>
-        <p>
-          A playful world where little dreamers can explore, create,
-          move, imagine and make new friends.
+
+        <p class="eyebrow">
+          Play & Explore
         </p>
+
+
+        <h2 class="section-heading">
+
+          Where imagination
+
+          <br>
+
+          comes to life.
+
+        </h2>
+
+
+        <p>
+
+          A playful world where little dreamers can explore,
+          create, move, imagine and make new friends.
+
+        </p>
+
       </div>
+
+
 
       <div class="cards">
-        <article class="card">
-          <h3>Little Ones</h3>
-          <p>
-            A gentle space for our youngest explorers to discover the
-            world at their own pace.
-          </p>
-        </article>
+
 
         <article class="card">
-          <h3>Big Adventures</h3>
+
+          <h3>
+            Little Ones
+          </h3>
+
+
           <p>
-            Room to move, discover, play and create wonderful childhood
-            memories.
+
+            A gentle space for our youngest explorers to
+            discover the world at their own pace.
+
           </p>
+
         </article>
 
+
+
         <article class="card">
-          <h3>Create</h3>
+
+          <h3>
+            Big Adventures
+          </h3>
+
+
           <p>
-            Creative activities where little hands can turn big ideas
-            into something real.
+
+            Room to move, discover, play and create wonderful
+            childhood memories.
+
           </p>
+
         </article>
+
+
+
+        <article class="card">
+
+          <h3>
+            Create
+          </h3>
+
+
+          <p>
+
+            Creative activities where little hands can turn
+            big ideas into something real.
+
+          </p>
+
+        </article>
+
       </div>
+
     </section>
 
-    <!-- PARTIES -->
-    <section class="parties" id="parties">
+
+
+    <!-- =========================
+         PARTIES
+    ========================== -->
+
+    <section
+      class="parties"
+      id="parties"
+    >
+
       <div class="parties-container">
-        <p class="eyebrow">Little Parties</p>
-        <h2 class="section-heading">Tiny celebrations.<br>Big memories.</h2>
+
+        <p class="eyebrow">
+          Little Parties
+        </p>
+
+
+        <h2 class="section-heading">
+
+          Tiny celebrations.
+
+          <br>
+
+          Big memories.
+
+        </h2>
+
 
         <p class="parties-description">
-          A special little corner for birthdays and celebrations filled
-          with imagination, play and beautiful moments.
+
+          A special little corner for birthdays and celebrations
+          filled with imagination, play and beautiful moments.
+
         </p>
 
-        <a href="#contact" class="button">Discover Little Parties</a>
-      </div>
-    </section>
 
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-      <div class="contact-container">
-        <p class="eyebrow">Come say hello</p>
-        <h2 class="section-heading">We'd love to<br>meet you.</h2>
+        <a
+          href="#contact"
+          class="button"
+        >
 
-        <p class="contact-description">
-          Little Dream Lab is being created with love for little dreamers,
-          their families and our future community.
-        </p>
+          Discover Little Parties
 
-        <a class="contact-email" href="mailto:info@littledreamlab.nl">
-          info@littledreamlab.nl
         </a>
 
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section
+      class="contact"
+      id="contact"
+    >
+
+      <div class="contact-container">
+
+        <p class="eyebrow">
+          Come say hello
+        </p>
+
+
+        <h2 class="section-heading">
+
+          We'd love to
+
+          <br>
+
+          meet you.
+
+        </h2>
+
+
+        <p class="contact-description">
+
+          Little Dream Lab is being created with love
+          for little dreamers, their families and our
+          future community.
+
+        </p>
+
+
+        <a
+          class="contact-email"
+          href="mailto:info@littledreamlab.nl"
+        >
+
+          info@littledreamlab.nl
+
+        </a>
+
+
         <p class="contact-address">
+
           <a
             href="https://www.google.com/maps/search/?api=1&query=Charlotte+van+Pallandthof+2+Diemen"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Charlotte van Pallandthof 2<br>
+
+            Charlotte van Pallandthof 2
+
+            <br>
+
             Diemen, Netherlands
+
           </a>
+
         </p>
+
+
+
+        <!-- SOCIAL MEDIA -->
+
+        <div class="social-links">
+
+          <a
+            id="instagram-contact"
+            class="social-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <span class="social-icon">
+              ◎
+            </span>
+
+            Instagram
+
+          </a>
+
+
+          <a
+            id="facebook-contact"
+            class="social-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <span class="social-icon">
+              f
+            </span>
+
+            Facebook
+
+          </a>
+
+        </div>
+
       </div>
+
     </section>
 
   </main>
 
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
   <footer>
-    © 2026 Little Dream Lab · Family Café · Play · Create · Connect
+
+
+    <div class="footer-social">
+
+      <a
+        id="instagram-footer"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram
+      </a>
+
+
+      <a
+        id="facebook-footer"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Facebook
+      </a>
+
+    </div>
+
+
+    <div>
+
+      © 2026 Little Dream Lab ·
+      Family Café ·
+      Play ·
+      Create ·
+      Connect
+
+    </div>
+
+
   </footer>
 
+
+
+  <!-- =========================
+       SOCIAL LINKS
+  ========================== -->
+
+  <script>
+
+    const instagramUrl =
+      [
+        "https://www.",
+        "instagram.com/",
+        "littledreamlabnl/"
+      ].join("");
+
+
+    const facebookUrl =
+      [
+        "https://www.",
+        "facebook.com/",
+        "profile.php?id=61584246195175"
+      ].join("");
+
+
+    document
+      .getElementById("instagram-contact")
+      .href = instagramUrl;
+
+
+    document
+      .getElementById("facebook-contact")
+      .href = facebookUrl;
+
+
+    document
+      .getElementById("instagram-footer")
+      .href = instagramUrl;
+
+
+    document
+      .getElementById("facebook-footer")
+      .href = facebookUrl;
+
+  </script>
+
+
 </body>
+
 </html>
